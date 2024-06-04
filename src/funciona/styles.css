@@ -1,0 +1,53 @@
+/* styles.css */
+.failed-attempts {
+  display: flex;
+  flex-direction: column;
+}
+
+.failed-attempt {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  border: 1px solid #000000;
+  margin-bottom: 5px;
+}
+
+.failed-attempt p {
+  margin: 0;
+  padding: 10px;
+  white-space: nowrap;
+  border-right: 2px solid #000000;
+}
+
+.failed-attempt p:last-child {
+  border-right: none;
+}
+
+.failed-attempt .attribute {
+  flex: 1;
+  text-align: center;
+}
+
+.failed-attempt .name {
+  font-weight: bold;
+}
+
+.correct {
+    background-color: lightgreen;
+}
+
+.incorrect {
+    background-color: #D91515FF;
+}
+
+.higher-dob-yellow {
+  background: linear-gradient(to top, lightgreen , #D91515FF ); 
+}
+
+.lower-dob-gray {
+  background: linear-gradient(to top, #D91515FF , lightgreen ); 
+}
+
+.same-dob-green{
+    background-color: lightgreen;  
+}

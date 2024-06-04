@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Kiryu Kazuma",
+    "sex": "Male",
+    "affiliation": "Tojo",
+    "hair": "Black",
+    "eye": "Brown",
+    "height": "184",
+    "dob": "1968",
+    "first_game_appearance": "Yakuza 1",
+    "karaoke": "Yes"
+  },
+  {
+    "id": 2,
+    "name": "Sawamura Haruka",
+    "sex": "Female",
+    "affiliation": "Morning Glory",
+    "hair": "Black",
+    "eye": "Brown",
+    "height": "165",
+    "dob": "1996",
+    "first_game_appearance": "Yakuza 1",
+    "karaoke": "Yes"
+  },
+  {
+    "id": 3,
+    "name": "Dojima Daigo",
+    "sex": "Male",
+    "affiliation": "Tojo",
+    "hair": "Black",
+    "eye": "Brown",
+    "height": "185",
+    "dob": "1975",
+    "first_game_appearance": "Yakuza 2",
+    "karaoke": "No"
+  },
+  {
+    "id": 4,
+    "name": "Majima Goro",
+    "sex": "Male",
+    "affiliation": "Tojo",
+    "hair": "Black",
+    "eye": "Brown",
+    "height": "186",
+    "dob": "1964",
+    "first_game_appearance": "Yakuza 1",
+    "karaoke": "Yes"
+  },
+  {
+    "id": 5,
+    "name": "Joongi Han (Y6)",
+    "sex": "Male",
+    "affiliation": "Jingweon Mafia",
+    "hair": "Silver Ash",
+    "eye": "Brown",
+    "height": "180",
+    "dob": "1990",
+    "first_game_appearance": "Yakuza 6",
+    "karaoke": "No"
+  }
+]

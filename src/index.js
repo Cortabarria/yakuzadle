@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './frontend/App';
+import reportWebVitals from './frontend/reportWebVitals';
+
+//import CharacterList from './frontend/list'
+//import CharacterList from './backend/charactersFunction/characterslist';
+//import CharacterList from "./backend/chara/CharacterList";
+
+import AppR from './funciona/findList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AppR/>
   </React.StrictMode>
 );
 
