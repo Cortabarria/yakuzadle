@@ -8,11 +8,15 @@ import reportWebVitals from './frontend/reportWebVitals';
 //import CharacterList from './backend/charactersFunction/characterslist';
 //import CharacterList from "./backend/chara/CharacterList";
 
-import AppR from './funciona/findList';
+//import AppR from './funciona/findList';
+
+import AppR from "./components/AppR"
+import Header from './components/Header';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Header/>
     <AppR/>
   </React.StrictMode>
 );

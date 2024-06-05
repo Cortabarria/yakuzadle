@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MyComponent3 } from "./MyComponent";
 import "./styles.css"; // Import the CSS file
+import "../assets/fonts/fonts.css"
 
 const peopleList = MyComponent3();
 const randomIndex = Math.floor(Math.random() * peopleList.length);
@@ -74,47 +75,70 @@ function renderFailedAttempts() {
   if (state.failedAttempts.length === 0) {
     return null;
   }
+
+function getTableHeaders(){
+    return (
+        <div className="boxy container-outer">
+          <div className="failed-attempt groupGuessesAnswersRow background-header-square">
+            <p className="squearanswer" style={{ fontSize : "1.5 vh"}}>Name</p>
+            <p className={`attribute squearanswer`}>Sex</p>
+            <p className={`attribute squearanswer`}>Affiliation</p>
+            <p className={`attribute squearanswer`}>Hair color</p>
+            <p className={`attribute squearanswer`}>Eye color</p>
+            <p className={`attribute squearanswer`}>Height</p>
+            <p className={`attribute squearanswer`}>Year of Birth</p>
+            <p className={`attribute squearanswer`}>First game appearance</p>
+            <p className={`attribute  squearanswer`}>Karaoke</p>
+          </div>
+        </div>
+    )
+}
   
   
   return (
-    <div className="failed-attempts" id="failedAttempts">
-      <h3>Failed Attempts:</h3>
-      {state.failedAttempts.slice().reverse().map((person, index) => {
-        let dobClass = '';
-        let higClass = "";
+    <div>
+      <h1 className="edosz-text">Yakuzadle</h1>
+      <div className="failed-attempts" id="failedAttempts">
 
-        if ((person.dob) > (randomCharacter.dob)) {
-          dobClass = "higher-dob";
-        } else if ((person.dob) < (randomCharacter.dob)) {
-          dobClass = "lower-dob";
-        } else {
-          dobClass = "same-dob-green";
-        }
+        {getTableHeaders()}
 
-        if (person.height > randomCharacter.height) {
-          higClass = "higher-dob";
-        } else if (person.height < randomCharacter.height) {
-          higClass = "lower-dob";
-        } else {
-          higClass = "same-dob-green";
-        }
-        
-        return (
-          <div className="boxy">
-            <div className="failed-attempt" key={index}>
-              <p>{person.name}</p>
-              <p className={`attribute ${person.sex === randomCharacter.sex ? 'correct' : 'incorrect'}`}>{person.sex}</p>
-              <p className={`attribute ${person.affiliation === randomCharacter.affiliation ? 'correct' : 'incorrect'}`}>{person.affiliation}</p>
-              <p className={`attribute ${person.hair === randomCharacter.hair ? 'correct' : 'incorrect'}`}>{person.hair}</p>
-              <p className={`attribute ${person.eye === randomCharacter.eye ? 'correct' : 'incorrect'}`}>{person.eye}</p>
-              <p className={`attribute ${higClass}`}>{person.height}</p>
-              <p className={`attribute ${dobClass}`}>{person.dob}</p>
-              <p className={`attribute ${person.first_game_appearance === randomCharacter.first_game_appearance ? 'correct' : 'incorrect'}`}>{person.first_game_appearance}</p>
-              <p className={`attribute ${person.karaoke === randomCharacter.karaoke ? 'correct' : 'incorrect'}`}>{person.karaoke}</p>
+        {state.failedAttempts.slice().reverse().map((person, index) => {
+          let dobClass = '';
+          let higClass = "";
+          
+          if ((person.dob) > (randomCharacter.dob)) {
+            dobClass = "higher-dob";
+          } else if ((person.dob) < (randomCharacter.dob)) {
+            dobClass = "lower-dob";
+          } else {
+            dobClass = "same-dob-green";
+          }
+          
+          if (person.height > randomCharacter.height) {
+            higClass = "higher-dob";
+          } else if (person.height < randomCharacter.height) {
+            higClass = "lower-dob";
+          } else {
+            higClass = "same-dob-green";
+          }
+          
+          return (
+            <div className="boxy container-outer">
+              <div className="failed-attempt groupGuessesAnswersRow" key={index}>
+                <p className="squearanswer" style={{ fontSize : "1.5 vh"}}>{person.name}</p>
+                <p className={`attribute ${person.sex === randomCharacter.sex ? 'correct' : 'incorrect'} squearanswer`}>{person.sex}</p>
+                <p className={`attribute ${person.affiliation === randomCharacter.affiliation ? 'correct' : 'incorrect'} squearanswer`}>{person.affiliation}</p>
+                <p className={`attribute ${person.hair === randomCharacter.hair ? 'correct' : 'incorrect'} squearanswer`}>{person.hair}</p>
+                <p className={`attribute ${person.eye === randomCharacter.eye ? 'correct' : 'incorrect'} squearanswer`}>{person.eye}</p>
+                <p className={`attribute ${higClass} squearanswer`}>{person.height}</p>
+                <p className={`attribute ${dobClass} squearanswer`}>{person.dob}</p>
+                <p className={`attribute ${person.first_game_appearance === randomCharacter.first_game_appearance ? 'correct' : 'incorrect'} squearanswer`}>{person.first_game_appearance}</p>
+                <p className={`attribute ${person.karaoke === randomCharacter.karaoke ? 'correct' : 'incorrect'} squearanswer`}>{person.karaoke}</p>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }

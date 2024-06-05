@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Edosz';
+  src: url('edosz.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.edosz-text {
+  font-family: 'Edosz', sans-serif;
+}

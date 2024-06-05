@@ -25,7 +25,7 @@ class Person {
   }
 
   greet() {
-    return `Hello, my name is ${this.name}, I am ${this.hair}, and I am affiliated with ${this.affiliation}.`;
+    return `Hello, my name is ${this.name}, I am ${this.sex}, and I am affiliated with ${this.affiliation}.`;
   }
 }
 

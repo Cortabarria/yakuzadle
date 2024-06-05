@@ -1,6 +1,6 @@
 // src/components/MyComponent.js
 import React from "react";
-import Person from "./Person";
+import Person from "../model/Person";
 //import peopleData from "../data.json";
 import peopleData from "./data.json";
 
