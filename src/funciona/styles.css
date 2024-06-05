@@ -40,14 +40,20 @@
     background-color: #D91515FF;
 }
 
-.higher-dob-yellow {
+.higher-dob {
   background: linear-gradient(to top, lightgreen , #D91515FF ); 
 }
 
-.lower-dob-gray {
+.lower-dob {
   background: linear-gradient(to top, #D91515FF , lightgreen ); 
 }
 
 .same-dob-green{
     background-color: lightgreen;  
+}
+
+.boxy{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
 }

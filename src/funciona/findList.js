@@ -81,26 +81,37 @@ function renderFailedAttempts() {
       <h3>Failed Attempts:</h3>
       {state.failedAttempts.slice().reverse().map((person, index) => {
         let dobClass = '';
-        
+        let higClass = "";
+
         if ((person.dob) > (randomCharacter.dob)) {
-          dobClass = "higher-dob-yellow";
+          dobClass = "higher-dob";
         } else if ((person.dob) < (randomCharacter.dob)) {
-          dobClass = "lower-dob-gray";
+          dobClass = "lower-dob";
         } else {
           dobClass = "same-dob-green";
         }
+
+        if (person.height > randomCharacter.height) {
+          higClass = "higher-dob";
+        } else if (person.height < randomCharacter.height) {
+          higClass = "lower-dob";
+        } else {
+          higClass = "same-dob-green";
+        }
         
         return (
-          <div className="failed-attempt" key={index}>
-            <p>{person.name}</p>
-            <p className={`attribute ${person.sex === randomCharacter.sex ? 'correct' : 'incorrect'}`}>{person.sex}</p>
-            <p className={`attribute ${person.affiliation === randomCharacter.affiliation ? 'correct' : 'incorrect'}`}>{person.affiliation}</p>
-            <p className={`attribute ${person.hair === randomCharacter.hair ? 'correct' : 'incorrect'}`}>{person.hair}</p>
-            <p className={`attribute ${person.eye === randomCharacter.eye ? 'correct' : 'incorrect'}`}>{person.eye}</p>
-            <p className={`attribute ${person.height === randomCharacter.height ? 'correct' : 'incorrect'}`}>{person.height}</p>
-            <p className={`attribute ${dobClass}`}>{person.dob}</p>
-            <p className={`attribute ${person.first_game_appearance === randomCharacter.first_game_appearance ? 'correct' : 'incorrect'}`}>{person.first_game_appearance}</p>
-            <p className={`attribute ${person.karaoke === randomCharacter.karaoke ? 'correct' : 'incorrect'}`}>{person.karaoke}</p>
+          <div className="boxy">
+            <div className="failed-attempt" key={index}>
+              <p>{person.name}</p>
+              <p className={`attribute ${person.sex === randomCharacter.sex ? 'correct' : 'incorrect'}`}>{person.sex}</p>
+              <p className={`attribute ${person.affiliation === randomCharacter.affiliation ? 'correct' : 'incorrect'}`}>{person.affiliation}</p>
+              <p className={`attribute ${person.hair === randomCharacter.hair ? 'correct' : 'incorrect'}`}>{person.hair}</p>
+              <p className={`attribute ${person.eye === randomCharacter.eye ? 'correct' : 'incorrect'}`}>{person.eye}</p>
+              <p className={`attribute ${higClass}`}>{person.height}</p>
+              <p className={`attribute ${dobClass}`}>{person.dob}</p>
+              <p className={`attribute ${person.first_game_appearance === randomCharacter.first_game_appearance ? 'correct' : 'incorrect'}`}>{person.first_game_appearance}</p>
+              <p className={`attribute ${person.karaoke === randomCharacter.karaoke ? 'correct' : 'incorrect'}`}>{person.karaoke}</p>
+            </div>
           </div>
         );
       })}
