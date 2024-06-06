@@ -5,6 +5,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MyriadPro-Light';
+  src: url('MyriadPro-Light.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .edosz-text {
   font-family: 'Edosz', sans-serif;
+}
+
+.myriad-text {
+  font-family: "MyriadPro-Light", sans-serif ;
 }

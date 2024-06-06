@@ -21,7 +21,10 @@
   box-sizing: border-box;
   flex: 1;
   text-align: center;
+  white-space: break-spaces;  
 }
+
+
 
 .failed-attempt p:last-child {
   border-right: none;
@@ -72,7 +75,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 50px;
+  min-height: 70px;
   letter-spacing: 0.4px;
   flex: 1;
 }
@@ -85,5 +88,11 @@
 }
 
 .background-header-square {
-    background-color: gainsboro;
+  background-color: gainsboro;
+}
+
+.winner{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }

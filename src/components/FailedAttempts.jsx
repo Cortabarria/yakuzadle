@@ -63,13 +63,7 @@ function FailedAttempts({ state, randomCharacter }) {
                 >
                   {person.hair}
                 </p>
-                <p
-                  className={`attribute ${
-                    person.eye === randomCharacter.eye ? "correct" : "incorrect"
-                  } squearanswer`}
-                >
-                  {person.eye}
-                </p>
+
                 <p className={`attribute ${higClass} squearanswer`}>
                   {person.height}
                 </p>
@@ -86,6 +80,19 @@ function FailedAttempts({ state, randomCharacter }) {
                 >
                   {person.first_game_appearance}
                 </p>
+
+                <p
+                  className={`attribute ${
+                    person.last_game_appearance ===
+                    randomCharacter.last_game_appearance
+                      ? "correct"
+                      : "incorrect"
+                  } squearanswer`}
+                  style={{ wordBreak: "break-all" }}
+                >
+                  {person.last_game_appearance}
+                </p>
+
                 <p
                   className={`attribute ${
                     person.karaoke === randomCharacter.karaoke

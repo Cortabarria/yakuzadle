@@ -9,6 +9,7 @@ import "../assets/fonts/fonts.css";
 
 const peopleList = MyComponent3();
 const randomCharacter = getRandomCharacter(peopleList);
+console.log(randomCharacter.name);
 
 function AppR() {
   const [state, setState] = useState({
@@ -35,6 +36,10 @@ function AppR() {
 
   function checkAnswer() {
     const answer = state.selectedName;
+    const selectedCharacter = peopleList.find(
+      (person) => person.name.toLowerCase() === answer.toLowerCase()
+    );
+
     if (answer.toLowerCase() === randomCharacter.name.toLowerCase()) {
       setState({
         ...state,
@@ -43,11 +48,11 @@ function AppR() {
         selectedName: "",
         incorrect: false,
         isValidSelection: false,
+        failedAttempts: selectedCharacter
+          ? [...state.failedAttempts, selectedCharacter]
+          : state.failedAttempts,
       });
     } else {
-      const selectedCharacter = peopleList.find(
-        (person) => person.name.toLowerCase() === answer.toLowerCase()
-      );
       setState({
         ...state,
         score: state.score - 1,

@@ -10,6 +10,7 @@ class Person {
     height,
     dob,
     first_game_appearance,
+    last_game_appearance,
     karaoke,
   }) {
     this.id = id;
@@ -21,6 +22,7 @@ class Person {
     this.height = height;
     this.dob = dob;
     this.first_game_appearance = first_game_appearance;
+    this.last_game_appearance = last_game_appearance;
     this.karaoke = karaoke;
   }
 

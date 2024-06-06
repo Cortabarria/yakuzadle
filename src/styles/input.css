@@ -1,0 +1,30 @@
+.guessInput{
+    width: 20em;
+    height: 2em;
+    font-size: 20px;
+}
+
+.layoutInput{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px;
+  margin-bottom: 30px; 
+}
+
+::placeholder {
+   text-align: center; 
+}
+
+button {
+    height: 2em; 
+    font-size: 20px; 
+}
+
