@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ConfettiComponent from "./congratulations/ConfettiComponent";
-import "../assets/fonts/fonts.css";
-import ResultInformation from "./inprocess/ResultInformation";
+import ConfettiComponent from "../congratulations/ConfettiComponent";
+import "../../assets/fonts/fonts.css";
+import ResultInformation from "../ResultInformation";
 
 function ConfettiWin() {
   const [runConfetti, setRunConfetti] = useState(false);

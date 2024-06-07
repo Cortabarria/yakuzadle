@@ -3,7 +3,7 @@ import Person from "../model/Person";
 import peopleData from "./data.json";
 
 
-export function MyComponent3() {
+export function ReturnCharactersJSON() {
   const people = peopleData.map((personData) => new Person(personData));
 
   return people;

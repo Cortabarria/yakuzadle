@@ -1,16 +1,17 @@
 // AppR.jsx
 import React, { useState } from "react";
-import { MyComponent3 } from "../utils/MyComponent3";
-import { getRandomCharacter } from "../utils/randomCharacter";
+import { ReturnCharactersJSON } from "../../utils/returnCharactersJSON";
+import { getRandomCharacter } from "../../utils/randomCharacter";
 import RenderWinScreen from "./RenderWinScreen";
-import RenderGuess from "./RenderGuess";
+import RenderGuess from "../RenderGuess";
 import FailedAttempts from "./FailedAttempts";
-import "../styles/styles.css";
-import "../assets/fonts/fonts.css";
-import RenderLoseScreen from "./RenderLoseScreen";
-import ResultInformation from "./inprocess/ResultInformation";
 
-const peopleList = MyComponent3();
+import "../../styles/styles.css"
+import "../../assets/fonts/fonts.css";
+import RenderLoseScreen from "./RenderLoseScreen";
+import ResultInformation from "../ResultInformation";
+
+const peopleList = ReturnCharactersJSON();
 const randomCharacter = getRandomCharacter(peopleList);
 console.log(randomCharacter.name);
 

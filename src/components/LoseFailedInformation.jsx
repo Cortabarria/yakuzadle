@@ -1,6 +1,6 @@
 // FailedAttempts.jsx
 import React from "react";
-import "../TableHeaders";
+import "./guessCharacterRandom/TableHeaders";
 
 function LoseFailedInformation({ randomCharacter }) {
   return (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AnimatedImage from "../test/AnimatedImage";
+import AnimatedImage from "./animation/AnimatedImage.js"
 
 function ResultInformation({ randomCharacter }){
     return (

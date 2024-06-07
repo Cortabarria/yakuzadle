@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "../assets/fonts/fonts.css";
-import ResultInformation from "./inprocess/ResultInformation";
-import LoseFailedInformation from "./test/LoseFailedInformation";
+import "../../assets/fonts/fonts.css";
+import ResultInformation from "../ResultInformation";
+import LoseFailedInformation from "../LoseFailedInformation";
 
 function RenderLoseScreen({ renderFailedAttempts, randomCharacter }) {
   return (

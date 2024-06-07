@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './frontend/App';
-import reportWebVitals from './frontend/reportWebVitals';
+import reportWebVitals from './reportWebVitals';
 
 //import CharacterList from './frontend/list'
 //import CharacterList from './backend/charactersFunction/characterslist';
@@ -10,7 +9,7 @@ import reportWebVitals from './frontend/reportWebVitals';
 
 //import AppR from './funciona/findList';
 
-import AppR from "./components/AppR"
+import AppR from './components/guessCharacterRandom/AppR';
 import Header from './components/Header';
 import "bootstrap/dist/css/bootstrap.min.css";
 

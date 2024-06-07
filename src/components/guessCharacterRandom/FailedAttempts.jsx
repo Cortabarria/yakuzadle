@@ -81,7 +81,7 @@ function FailedAttempts({ state, randomCharacter, score }) {
                   {person.sex}
                 </p>
                 <p className={`attribute ${affiliationClass} squearanswer`}>
-                  {person.affiliation.join(", ")}
+                  {person.affiliation.join(" / ")}
                 </p>
                 <p
                   className={`attribute ${
