@@ -12,6 +12,11 @@ import reportWebVitals from './frontend/reportWebVitals';
 
 import AppR from "./components/AppR"
 import Header from './components/Header';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
+integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
+crossorigin="anonymous"></link>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

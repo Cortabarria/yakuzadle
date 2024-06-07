@@ -1,5 +1,6 @@
-import React from "react";
-import "../styles/input.css"
+import React, { useState } from "react";
+import "../styles/input.css";
+import { Button } from "react-bootstrap";
 
 function RenderGuess({
   state,
@@ -8,26 +9,58 @@ function RenderGuess({
   peopleList,
   renderFailedAttempts,
 }) {
+  const [showList, setShowList] = useState(false);
+
+  const filterPeopleList = () => {
+    const { inputText } = state;
+    const filteredList = peopleList.filter((person) => {
+      const name = person.name.toLowerCase();
+      const input = inputText.toLowerCase();
+      return (
+        name.startsWith(input) ||
+        (name.includes(" ") && name.split(" ")[1].startsWith(input))
+      );
+    });
+    return filteredList;
+  };
+
+  const handleInputFocus = () => {
+    setShowList(true);
+  };
+
+  const handleInputBlur = () => {
+    setShowList(false);
+  };
+
   return (
     <div>
-      <div class="inputContainer">
+      <div className="inputContainer">
         <input
-          class="guessInput myriad-text layoutInput"
+          className="guessInput myriad-text layoutInput"
           type="text"
-          list="peopleList"
+          list={state.inputText ? "peopleList" : undefined} 
           value={state.inputText}
           onChange={handleInputChange}
+          onFocus={handleInputFocus}
+          onBlur={handleInputBlur}
           autoFocus
           placeholder="🐲 Write the character's name 🐲"
         />
-        <datalist id="peopleList">
-          {peopleList.map((person, index) => (
-            <option key={index} value={person.name} />
-          ))}
-        </datalist>
-        <button onClick={checkAnswer} disabled={!state.isValidSelection}>
+        {showList &&
+          state.inputText && ( 
+            <datalist id="peopleList">
+              {filterPeopleList().map((person, index) => (
+                <option key={index} value={person.name} />
+              ))}
+            </datalist>
+          )}
+        <Button
+          variant="primary"
+          onClick={checkAnswer}
+          disabled={!state.isValidSelection}
+        >
           Guess!
-        </button>
+        </Button>
         <div>Score: {state.score}</div>
       </div>
       {renderFailedAttempts()}

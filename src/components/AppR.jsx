@@ -1,11 +1,14 @@
+// AppR.jsx
 import React, { useState } from "react";
 import { MyComponent3 } from "../utils/MyComponent3";
 import { getRandomCharacter } from "../utils/randomCharacter";
 import RenderWinScreen from "./RenderWinScreen";
 import RenderGuess from "./RenderGuess";
-import FailedAttempts from "./FailedAttempts"; // Import FailedAttempts
+import FailedAttempts from "./FailedAttempts";
 import "../styles/styles.css";
 import "../assets/fonts/fonts.css";
+import RenderLoseScreen from "./RenderLoseScreen";
+import ResultInformation from "./inprocess/ResultInformation";
 
 const peopleList = MyComponent3();
 const randomCharacter = getRandomCharacter(peopleList);
@@ -26,12 +29,12 @@ function AppR() {
     const isValidSelection = peopleList.some(
       (person) => person.name.toLowerCase() === inputText.toLowerCase()
     );
-    setState({
-      ...state,
+    setState((prevState) => ({
+      ...prevState,
       inputText,
       selectedName: inputText,
       isValidSelection,
-    });
+    }));
   }
 
   function checkAnswer() {
@@ -41,29 +44,29 @@ function AppR() {
     );
 
     if (answer.toLowerCase() === randomCharacter.name.toLowerCase()) {
-      setState({
-        ...state,
+      setState((prevState) => ({
+        ...prevState,
         score: 1,
         inputText: "",
         selectedName: "",
         incorrect: false,
         isValidSelection: false,
         failedAttempts: selectedCharacter
-          ? [...state.failedAttempts, selectedCharacter]
-          : state.failedAttempts,
-      });
+          ? [...prevState.failedAttempts, selectedCharacter]
+          : prevState.failedAttempts,
+      }));
     } else {
-      setState({
-        ...state,
-        score: state.score - 1,
+      setState((prevState) => ({
+        ...prevState,
+        score: prevState.score - 1,
         inputText: "",
         selectedName: "",
         incorrect: true,
         isValidSelection: false,
         failedAttempts: selectedCharacter
-          ? [...state.failedAttempts, selectedCharacter]
-          : state.failedAttempts,
-      });
+          ? [...prevState.failedAttempts, selectedCharacter]
+          : prevState.failedAttempts,
+      }));
     }
   }
 
@@ -73,6 +76,25 @@ function AppR() {
         renderFailedAttempts={() => (
           <FailedAttempts state={state} randomCharacter={randomCharacter} />
         )}
+        randomCharacter={randomCharacter}
+      />
+    );
+  }
+  if (state.score === -10) {
+    return (
+      <RenderLoseScreen
+        state={state}
+        handleInputChange={handleInputChange}
+        checkAnswer={checkAnswer}
+        peopleList={peopleList}
+        renderFailedAttempts={() => (
+          <FailedAttempts
+            state={state}
+            randomCharacter={randomCharacter}
+            score={state.score}
+          />
+        )}
+        randomCharacter={randomCharacter}
       />
     );
   } else {
@@ -83,7 +105,11 @@ function AppR() {
         checkAnswer={checkAnswer}
         peopleList={peopleList}
         renderFailedAttempts={() => (
-          <FailedAttempts state={state} randomCharacter={randomCharacter} />
+          <FailedAttempts
+            state={state}
+            randomCharacter={randomCharacter}
+            score={state.score}
+          />
         )}
       />
     );

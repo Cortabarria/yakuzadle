@@ -1,13 +1,17 @@
+// FailedAttempts.jsx
 import React from "react";
 import TableHeaders from "./TableHeaders";
 
-function FailedAttempts({ state, randomCharacter }) {
+function FailedAttempts({ state, randomCharacter, score }) {
   if (state.failedAttempts.length === 0) {
     return null;
   }
 
   return (
-    <div className="failed-attempts" id="failedAttempts">
+    <div
+      className={`failed-attempts ${score === -5 ? "dark-blue" : ""}`}
+      id="failedAttempts"
+    >
       <TableHeaders />
       {state.failedAttempts
         .slice()
@@ -16,20 +20,34 @@ function FailedAttempts({ state, randomCharacter }) {
           let dobClass = "";
           let higClass = "";
 
-          if (person.dob > randomCharacter.dob) {
-            dobClass = "higher-dob";
-          } else if (person.dob < randomCharacter.dob) {
-            dobClass = "lower-dob";
-          } else {
+          // Year
+          if (randomCharacter.dob === person.dob) {
             dobClass = "same-dob-green";
+          } else {
+            if (randomCharacter.dob !== "?" && person.dob !== "?") {
+              if (person.dob > randomCharacter.dob) {
+                dobClass = "higher-dob";
+              } else if (person.dob < randomCharacter.dob) {
+                dobClass = "lower-dob";
+              }
+            } else {
+              dobClass = "incorrect";
+            }
           }
 
-          if (person.height > randomCharacter.height) {
-            higClass = "higher-dob";
-          } else if (person.height < randomCharacter.height) {
-            higClass = "lower-dob";
-          } else {
+          // Height
+          if (person.height === randomCharacter.height) {
             higClass = "same-dob-green";
+          } else {
+            if (randomCharacter.height !== "?" && person.height !== "?") {
+              if (person.height > randomCharacter.height) {
+                higClass = "higher-dob";
+              } else if (person.height < randomCharacter.height) {
+                higClass = "lower-dob";
+              }
+            } else {
+              higClass = "incorrect";
+            }
           }
 
           return (
