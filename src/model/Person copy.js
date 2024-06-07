@@ -16,7 +16,7 @@ class Person {
     this.id = id;
     this.name = name;
     this.sex = sex;
-    this.affiliation = Array.isArray(affiliation) ? affiliation : [affiliation];
+    this.affiliation = affiliation;
     this.hair = hair;
     this.eye = eye;
     this.height = height;
@@ -27,9 +27,7 @@ class Person {
   }
 
   greet() {
-    return `Hello, my name is ${this.name}, I am ${
-      this.sex
-    }, and I am affiliated with ${this.affiliation.join(", ")}.`;
+    return `Hello, my name is ${this.name}, I am ${this.sex}, and I am affiliated with ${this.affiliation}.`;
   }
 }
 

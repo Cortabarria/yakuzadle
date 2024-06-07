@@ -50,6 +50,10 @@
   background-color: lightgreen;
 }
 
+.partial-match {
+  background-color: yellow;
+}
+
 .boxy {
   user-select: none;
 }

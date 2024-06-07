@@ -50,6 +50,23 @@ function FailedAttempts({ state, randomCharacter, score }) {
             }
           }
 
+          // Check if affiliations match
+          const fullMatch =
+            JSON.stringify(person.affiliation) ===
+            JSON.stringify(randomCharacter.affiliation);
+          const partialMatch = person.affiliation.some((aff) =>
+            randomCharacter.affiliation.includes(aff)
+          );
+
+          let affiliationClass = "";
+          if (fullMatch) {
+            affiliationClass = "correct";
+          } else if (partialMatch) {
+            affiliationClass = "partial-match";
+          } else {
+            affiliationClass = "incorrect";
+          }
+
           return (
             <div className="boxy container-outer" key={index}>
               <div className="failed-attempt groupGuessesAnswersRow">
@@ -63,14 +80,8 @@ function FailedAttempts({ state, randomCharacter, score }) {
                 >
                   {person.sex}
                 </p>
-                <p
-                  className={`attribute ${
-                    person.affiliation === randomCharacter.affiliation
-                      ? "correct"
-                      : "incorrect"
-                  } squearanswer`}
-                >
-                  {person.affiliation}
+                <p className={`attribute ${affiliationClass} squearanswer`}>
+                  {person.affiliation.join(", ")}
                 </p>
                 <p
                   className={`attribute ${
