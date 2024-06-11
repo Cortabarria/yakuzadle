@@ -11,6 +11,7 @@ function RenderGuess({
 }) {
   const [showList, setShowList] = useState(false);
 
+  /*
   const filterPeopleList = () => {
     const { inputText } = state;
     const filteredList = peopleList.filter((person) => {
@@ -20,6 +21,32 @@ function RenderGuess({
         name.startsWith(input) ||
         (name.includes(" ") && name.split(" ")[1].startsWith(input))
       );
+    });
+    return filteredList;
+  };
+*/
+  
+  // Returns only people that have a name (this include first name, any name after a space or "(" ) that starts with what you are typing
+  const filterPeopleList = () => {
+    const { inputText } = state;
+    const filteredList = peopleList.filter((person) => {
+      const name = person.name.toLowerCase();
+      const input = inputText.toLowerCase();
+
+      const inputParts = input
+        .split(/\s+/)
+        .filter((part) => part.trim() !== ""); // Split input text by spaces
+      const nameParts = name.match(/\(|\)|[^\s()]+/g);
+
+      let inputIndex = 0;
+      for (let i = 0; i < nameParts.length; i++) {
+        if (nameParts[i].startsWith(inputParts[inputIndex])) {
+          inputIndex++;
+          if (inputIndex === inputParts.length) {
+            return true;
+          }
+        }
+      }
     });
     return filteredList;
   };

@@ -11,7 +11,7 @@ import "../../assets/fonts/fonts.css";
 import RenderLoseScreen from "./RenderLoseScreen";
 import ResultInformation from "../ResultInformation";
 
-const peopleList = ReturnCharactersJSON();
+let peopleList = ReturnCharactersJSON();
 const randomCharacter = getRandomCharacter(peopleList);
 console.log(randomCharacter.name);
 
@@ -43,6 +43,14 @@ function AppR() {
     const selectedCharacter = peopleList.find(
       (person) => person.name.toLowerCase() === answer.toLowerCase()
     );
+
+    // Delete selected character from peopleList
+    if (selectedCharacter) {
+      peopleList = peopleList.filter(
+        (person) =>
+          person.name.toLowerCase() !== selectedCharacter.name.toLowerCase()
+      );
+    }
 
     if (answer.toLowerCase() === randomCharacter.name.toLowerCase()) {
       setState((prevState) => ({
