@@ -60,7 +60,7 @@ function RenderGuess({
   };
 
   return (
-    <div>
+    <div className="change">
       <div className="inputContainer">
         <input
           className="guessInput myriad-text layoutInput"

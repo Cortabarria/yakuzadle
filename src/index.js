@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+//import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -11,7 +11,11 @@ import reportWebVitals from './reportWebVitals';
 
 import AppR from './components/guessCharacterRandom/AppR';
 import Header from './components/Header';
+import MainMenu from './components/MainMenu';
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
 integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
@@ -20,8 +24,10 @@ crossorigin="anonymous"></link>
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header/>
-    <AppR/>
+    <BrowserRouter>
+      <Header />
+      <MainMenu />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
