@@ -1,33 +1,26 @@
+// AppRR.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { ReturnCharactersJSON } from "../../utils/returnCharactersJSON";
 import { getRandomCharacter } from "../../utils/randomCharacter";
-import RenderWinScreen from "./RenderWinScreen";
+import RenderWinScreen from "../guessCharacterRandom/RenderWinScreen";
 import RenderGuess from "../RenderGuessR";
-import FailedAttempts from "./FailedAttempts";
-
+import FailedAttempts from "../guessCharacterRandom/FailedAttempts";
 import "../../styles/styles.css";
 import "../../assets/fonts/fonts.css";
-import RenderLoseScreen from "./RenderLoseScreen";
-import ResultInformation from "../ResultInformation";
+import RenderLoseScreen from "../guessCharacterRandom/RenderLoseScreen";
 
 function AppR() {
   const [peopleList, setPeopleList] = useState([]);
   const [randomCharacter, setRandomCharacter] = useState(null);
-
-  // useRef to track whether the initialization has been done
   const hasInitialized = useRef(false);
 
   useEffect(() => {
-    // Check if the initialization has not been done yet
     if (!hasInitialized.current) {
-      // Generate the list of characters and a random character
       const list = ReturnCharactersJSON();
       setPeopleList(list);
       const character = getRandomCharacter(list);
       setRandomCharacter(character);
       console.log(character.name);
-
-      // Mark the initialization as done
       hasInitialized.current = true;
     }
   }, []);
@@ -41,7 +34,6 @@ function AppR() {
     failedAttempts: [],
   });
 
-  // Wait until randomCharacter is set before rendering
   if (!randomCharacter) return null;
 
   function handleInputChange(event) {
@@ -63,7 +55,6 @@ function AppR() {
       (person) => person.name.toLowerCase() === answer.toLowerCase()
     );
 
-    // Remove the selected character from the peopleList
     if (selectedCharacter) {
       setPeopleList((prevList) =>
         prevList.filter(
@@ -73,7 +64,6 @@ function AppR() {
       );
     }
 
-    // Check if the answer is correct
     if (answer.toLowerCase() === randomCharacter.name.toLowerCase()) {
       setState((prevState) => ({
         ...prevState,
@@ -100,8 +90,6 @@ function AppR() {
       }));
     }
   }
-
-  // Render the win screen if the score is 1
   if (state.score === 1) {
     return (
       <RenderWinScreen
@@ -113,7 +101,6 @@ function AppR() {
     );
   }
 
-  // Render the lose screen if the score is -10
   if (state.score === -10) {
     return (
       <RenderLoseScreen
@@ -131,10 +118,7 @@ function AppR() {
         randomCharacter={randomCharacter}
       />
     );
-  }
-
-  // Render the guessing interface otherwise
-  else {
+  } else {
     return (
       <RenderGuess
         state={state}

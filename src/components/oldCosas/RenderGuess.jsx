@@ -65,7 +65,7 @@ function RenderGuess({
         <input
           className="guessInput myriad-text layoutInput"
           type="text"
-          list={state.inputText ? "peopleList" : undefined} 
+          list={state.inputText ? "peopleList" : undefined}
           value={state.inputText}
           onChange={handleInputChange}
           onFocus={handleInputFocus}
@@ -73,14 +73,13 @@ function RenderGuess({
           autoFocus
           placeholder="🐲 Write the character's name 🐲"
         />
-        {showList &&
-          state.inputText && ( 
-            <datalist id="peopleList">
-              {filterPeopleList().map((person, index) => (
-                <option key={index} value={person.name} />
-              ))}
-            </datalist>
-          )}
+        {showList && state.inputText && (
+          <datalist id="peopleList">
+            {filterPeopleList().map((person, index) => (
+              <option key={index} value={person.name} />
+            ))}
+          </datalist>
+        )}
         <Button
           variant="primary"
           onClick={checkAnswer}
