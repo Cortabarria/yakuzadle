@@ -1,4 +1,25 @@
 /* styles.css */
+.squareanswer {
+  margin: 0;
+  position: relative;
+  border: 1px solid hsla(0, 0%, 100%, .59);
+  box-sizing: border-box;
+  min-width: 70px;
+  font-size: 0.8em;
+  font-weight: 650 !important;
+  border-radius: 0.25rem !important;
+  white-space: pre;
+  box-shadow: inset 0 0 5px #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+  letter-spacing: 0.4px;
+  flex: 1;
+  margin-right: 30px;
+  background-color: gainsboro;
+}
+
 .failed-attempts {
   margin-top: 100px;
   display: flex;
@@ -9,13 +30,14 @@
 .failed-attempt {
   display: flex;
   justify-content: space-between;
-  background-color: #f2f2f2;
+  /*background-color: #f2f2f2;
   /* border: 1px solid #000000; */
   width: 90%;
+  margin-right: 20px;
 }
 
 .failed-attempt p {
-  margin: 0;
+  margin: 2px;
   padding: 10px;
   white-space: nowrap;
   /* border-right: 2px solid #000000; */
@@ -26,10 +48,6 @@
 }
 
 
-
-.failed-attempt p:last-child {
-  border-right: none;
-}
 
 .correct {
   background-color: lightgreen;
@@ -66,24 +84,7 @@
   width: 90%;
 }
 
-.squearanswer {
-  margin: 0;
-  position: relative;
-  border: 1px solid hsla(0, 0%, 100%, .59);
-  box-sizing: border-box;
-  min-width: 70px;
-  font-size: 0.8em;
-  font-weight: 650 !important;
-  border-radius: 0.25rem !important;
-  white-space: pre;
-  box-shadow: inset 0 0 5px #000000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 70px;
-  letter-spacing: 0.4px;
-  flex: 1;
-}
+
 
 .container-outer {
   display: flex;
@@ -93,7 +94,7 @@
 }
 
 .background-header-square {
-  background-color: gainsboro;
+  /*background-color: gainsboro;*/
 }
 
 .winner{

@@ -11,35 +11,6 @@ import {
 import "../styles/input.css";
 import heartShower from "./guessInformation/heartShower";
 
-const NumberList = ({ count }) => {
-  const total = count;
-  const heartCount = 10 + total;
-  const heart2Count = 10 - heartCount;
-
-  return (
-    <div>
-      {Array.from({ length: heartCount }, (_, i) => (
-        <img
-          key={`heart-${i}`}
-          src="images/assets/heart.png"
-          alt={`heart-${i}`}
-          width={"20px"}
-        />
-      ))}
-      {Array.from({ length: heart2Count }, (_, i) => (
-        <img
-          key={`heart2-${i}`}
-          src="images/assets/heart2.png"
-          alt={`heart2-${i}`}
-          width={"20px"}
-          style={{ opacity: 0.5 }} 
-        />
-      ))}
-    </div>
-  );
-};
-
-
 function RenderGuess({
   state,
   handleInputChange,
@@ -145,41 +116,41 @@ function RenderGuess({
 
   return (
     <div className="change">
-      <div className="inputContainer">
-        <Autocomplete
-          style={{ width: 500 }}
-          value={state.selectedName ? { name: state.selectedName } : null}
-          onChange={handleAutocompleteChange}
-          inputValue={inputValue}
-          onInputChange={(event, newInputValue) => {
-            setInputValue(newInputValue);
-            handleInputChange({ target: { value: newInputValue } });
-          }}
-          options={filteredOptions}
-          getOptionLabel={(option) => option.name}
-          renderOption={renderOption}
-          isOptionEqualToValue={(option, value) => option.name === value.name}
-          renderInput={(params) => (
-            <TextField
-              {...params}
-              label="🐲 Write the character's name 🐲"
-              variant="outlined"
-              inputRef={inputRef}
-              autoFocus
-            />
-          )}
-        />
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={checkAnswer}
-          disabled={!state.isValidSelection}
-        >
-          Guess!
-        </Button>
-        <div>
-          {heartShower(state.score)}
+      <div className="squareInfo">
+        <div className="inputContainer">
+          <Autocomplete
+            style={{ width: 500, background: "whitesmoke" }}
+            value={state.selectedName ? { name: state.selectedName } : null}
+            onChange={handleAutocompleteChange}
+            inputValue={inputValue}
+            onInputChange={(event, newInputValue) => {
+              setInputValue(newInputValue);
+              handleInputChange({ target: { value: newInputValue } });
+            }}
+            options={filteredOptions}
+            getOptionLabel={(option) => option.name}
+            renderOption={renderOption}
+            isOptionEqualToValue={(option, value) => option.name === value.name}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label="🐲 Write the character's name 🐲"
+                variant="outlined"
+                inputRef={inputRef}
+                autoFocus
+              />
+            )}
+          />
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={checkAnswer}
+            disabled={!state.isValidSelection}
+          >
+            Guess!
+          </Button>
         </div>
+        <div className="heartContainer">{heartShower(state.score)}</div>
       </div>
       {renderFailedAttempts()}
     </div>

@@ -9,18 +9,18 @@ function TableHeaders() {
     <div className="boxy container-outer">
       <i class="fa-regular fa-circle-question"></i>
       <div className="failed-attempt groupGuessesAnswersRow background-header-square">
-        <p className="squearanswer" style={{ fontSize: "1.5 vh" }}>
+        <p className="squareanswer" style={{ fontSize: "1.5 vh" }}>
           Name
         </p>
-        <p className="attribute squearanswer">Sex</p>
-        <p className="attribute squearanswer">Affiliation</p>
-        <p className="attribute squearanswer">Hair color</p>
-        <p className="attribute squearanswer">Height</p>
-        <p className="attribute squearanswer">Year of birth</p>
-        <p className="attribute squearanswer">First game appearance</p>
-        <p className="attribute squearanswer">Last game appearance</p>
-        <p className="attribute squearanswer">
-          Karaoke
+        <p className="attribute squareanswer">Sex</p>
+        <p className="attribute squareanswer">Affiliation</p>
+        <p className="attribute squareanswer">Hair color</p>
+        <p className="attribute squareanswer">Height</p>
+        <p className="attribute squareanswer">Year of birth</p>
+        <p className="attribute squareanswer">First game appearance</p>
+        <p className="attribute squareanswer">Last game appearance</p>
+        <p className="attribute squareanswer">
+          Karaoke&nbsp;
           <a
             data-tooltip-id="guide"
             data-tooltip-content="The character sings a karaoke song or appears in a video"

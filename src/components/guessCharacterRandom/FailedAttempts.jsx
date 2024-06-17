@@ -70,17 +70,17 @@ function FailedAttempts({ state, randomCharacter, score }) {
           return (
             <div className="boxy container-outer" key={index}>
               <div className="failed-attempt groupGuessesAnswersRow">
-                <p className="squearanswer" style={{ fontSize: "1.5 vh" }}>
+                <p className="squareanswer" style={{ fontSize: "1.5 vh" }}>
                   {person.name}
                 </p>
                 <p
                   className={`attribute ${
                     person.sex === randomCharacter.sex ? "correct" : "incorrect"
-                  } squearanswer`}
+                  } squareanswer`}
                 >
                   {person.sex}
                 </p>
-                <p className={`attribute ${affiliationClass} squearanswer`}>
+                <p className={`attribute ${affiliationClass} squareanswer`}>
                   {person.affiliation.join(" / ")}
                 </p>
                 <p
@@ -88,15 +88,15 @@ function FailedAttempts({ state, randomCharacter, score }) {
                     person.hair === randomCharacter.hair
                       ? "correct"
                       : "incorrect"
-                  } squearanswer`}
+                  } squareanswer`}
                 >
                   {person.hair}
                 </p>
 
-                <p className={`attribute ${higClass} squearanswer`}>
+                <p className={`attribute ${higClass} squareanswer`}>
                   {person.height}
                 </p>
-                <p className={`attribute ${dobClass} squearanswer`}>
+                <p className={`attribute ${dobClass} squareanswer`}>
                   {person.dob}
                 </p>
                 <p
@@ -105,7 +105,7 @@ function FailedAttempts({ state, randomCharacter, score }) {
                     randomCharacter.first_game_appearance
                       ? "correct"
                       : "incorrect"
-                  } squearanswer`}
+                  } squareanswer`}
                 >
                   {person.first_game_appearance}
                 </p>
@@ -116,7 +116,7 @@ function FailedAttempts({ state, randomCharacter, score }) {
                     randomCharacter.last_game_appearance
                       ? "correct"
                       : "incorrect"
-                  } squearanswer`}
+                  } squareanswer`}
                   style={{ wordBreak: "break-all" }}
                 >
                   {person.last_game_appearance}
@@ -127,7 +127,7 @@ function FailedAttempts({ state, randomCharacter, score }) {
                     person.karaoke === randomCharacter.karaoke
                       ? "correct"
                       : "incorrect"
-                  } squearanswer`}
+                  } squareanswer`}
                 >
                   {person.karaoke}
                 </p>

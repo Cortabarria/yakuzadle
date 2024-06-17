@@ -1,33 +1,31 @@
-import React from 'react';
-//import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-
-//import CharacterList from './frontend/list'
-//import CharacterList from './backend/charactersFunction/characterslist';
-//import CharacterList from "./backend/chara/CharacterList";
-
-//import AppR from './funciona/findList';
-
-import AppR from './components/guessCharacterRandom/AppR';
-import Header from './components/Header';
-import MainMenu from './components/MainMenu';
-import "bootstrap/dist/css/bootstrap.min.css";
-
+import React from "react";
 import ReactDOM from "react-dom";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+
+import AppR from "./components/guessCharacterRandom/AppR";
+import Header from "./components/Header";
+import MainMenu from "./components/MainMenu";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" 
-integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
-crossorigin="anonymous"></link>
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Header />
-      <MainMenu />
-    </BrowserRouter>
+    <div
+      style={{
+        backgroundImage: "url(images/assets/background.png)",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+        height: "100vh",
+        overflow: "auto",
+      }}
+    >
+      <BrowserRouter>
+        <Header />
+        <MainMenu />
+      </BrowserRouter>
+    </div>
   </React.StrictMode>
 );
 

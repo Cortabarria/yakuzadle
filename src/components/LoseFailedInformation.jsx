@@ -6,28 +6,28 @@ function LoseFailedInformation({ randomCharacter }) {
   return (
     <div className="boxy container-outer">
       <div className="failed-attempt groupGuessesAnswersRow">
-        <p className="failed squearanswer" style={{ fontSize: "1.5 vh" }}>
+        <p className="failed squareanswer" style={{ fontSize: "1.5 vh" }}>
           {randomCharacter.name}
         </p>
-        <p className="failed squearanswer">{randomCharacter.sex}</p>
+        <p className="failed squareanswer">{randomCharacter.sex}</p>
 
-        <p className="failed squearanswer">{randomCharacter.affiliation}</p>
+        <p className="failed squareanswer">{randomCharacter.affiliation}</p>
 
-        <p className="failed squearanswer">{randomCharacter.hair}</p>
+        <p className="failed squareanswer">{randomCharacter.hair}</p>
 
-        <p className="failed squearanswer">{randomCharacter.height}</p>
+        <p className="failed squareanswer">{randomCharacter.height}</p>
 
-        <p className="failed squearanswer">{randomCharacter.dob}</p>
+        <p className="failed squareanswer">{randomCharacter.dob}</p>
 
-        <p className="failed squearanswer">
+        <p className="failed squareanswer">
           {randomCharacter.first_game_appearance}
         </p>
 
-        <p className="failed squearanswer">
+        <p className="failed squareanswer">
           {randomCharacter.last_game_appearance}
         </p>
 
-        <p className="failed squearanswer">{randomCharacter.karaoke}</p>
+        <p className="failed squareanswer">{randomCharacter.karaoke}</p>
       </div>
     </div>
   );
