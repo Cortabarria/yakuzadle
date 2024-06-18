@@ -1,6 +1,6 @@
-// FailedAttempts.jsx
 import React from "react";
 import TableHeaders from "./TableHeaders";
+import "../../styles/FailedAttempts.css";
 
 function FailedAttempts({ state, randomCharacter, score }) {
   if (state.failedAttempts.length === 0) {
@@ -70,8 +70,17 @@ function FailedAttempts({ state, randomCharacter, score }) {
           return (
             <div className="boxy container-outer" key={index}>
               <div className="failed-attempt groupGuessesAnswersRow">
-                <p className="squareanswer" style={{ fontSize: "1.5 vh" }}>
-                  {person.name}
+                <p className="squareanswer" style={{ fontSize: "1.5vh" }}>
+                  <div className="image-container">
+                    <img
+                      src="images/charactersPortraits/kazzy.png"
+                      height="100px"
+                      width="100px"
+                      alt={person.name}
+                      className="hover-image"
+                    />
+                    <div className="hover-text">{person.name}</div>
+                  </div>
                 </p>
                 <p
                   className={`attribute ${

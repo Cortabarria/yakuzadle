@@ -7,19 +7,18 @@ import { Tooltip } from "react-tooltip";
 function TableHeaders() {
   return (
     <div className="boxy container-outer">
-      <i class="fa-regular fa-circle-question"></i>
       <div className="failed-attempt groupGuessesAnswersRow background-header-square">
-        <p className="squareanswer" style={{ fontSize: "1.5 vh" }}>
+        <p className="squareheader" style={{ fontSize: "1.5 vh" }}>
           Name
         </p>
-        <p className="attribute squareanswer">Sex</p>
-        <p className="attribute squareanswer">Affiliation</p>
-        <p className="attribute squareanswer">Hair color</p>
-        <p className="attribute squareanswer">Height</p>
-        <p className="attribute squareanswer">Year of birth</p>
-        <p className="attribute squareanswer">First game appearance</p>
-        <p className="attribute squareanswer">Last game appearance</p>
-        <p className="attribute squareanswer">
+        <p className="squareheader">Sex</p>
+        <p className="squareheader">Affiliation</p>
+        <p className="squareheader">Hair color</p>
+        <p className="squareheader">Height</p>
+        <p className="squareheader">Year of birth</p>
+        <p className="squareheader">First game appearance</p>
+        <p className="squareheader">Last game appearance</p>
+        <p className="squareheader">
           Karaoke&nbsp;
           <a
             data-tooltip-id="guide"
