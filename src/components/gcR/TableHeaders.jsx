@@ -23,7 +23,6 @@ function TableHeaders() {
           <a
             data-tooltip-id="guide"
             data-tooltip-content="The character sings a karaoke song or appears in a video"
-            data-tooltip-place="left"
           >
             <FontAwesomeIcon icon={faCircleQuestion} />
           </a>

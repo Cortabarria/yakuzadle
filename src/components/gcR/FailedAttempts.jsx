@@ -74,10 +74,10 @@ function FailedAttempts({ state, randomCharacter, score }) {
                   <div className="image-container">
                     <img
                       src="images/charactersPortraits/kazzy.png"
-                      height="5vh"
-                      width="5vw"
+                      height="100px"
+                      width="100px"
                       alt={person.name}
-                      className="hover-image img"
+                      className="hover-image"
                     />
                     <div className="hover-text">{person.name}</div>
                   </div>

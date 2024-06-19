@@ -115,7 +115,7 @@ function RenderGuess({
   );
 
   return (
-    <div className="change">
+    <div className="change" >
       <div className="squareInfo">
         <div className="inputContainer">
           <Autocomplete

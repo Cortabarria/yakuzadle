@@ -1,0 +1,21 @@
+Se agrego esto para poder hacer que en celular se pueda scrollear para derecha e izquierda la informacion del personaje seleccionado. 
+.failed-attempts {
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+Comentado para testeo
+.squareInfo{
+  background-color: #7b6d6d6b; 
+  /* padding-top: 18px;
+  padding-bottom: 18px;
+  margin-right: 222px;
+  margin-left: 222px; */
+}
+
+Se agrego esto para garantizar una buena visual de los cuadraditos
+.squareanswer {
+  min-height: 100px; 
+  height: 5vw;
+}
+
+Se agregaron vw y vh

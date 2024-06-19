@@ -32,7 +32,7 @@ button {
 .customDropdown {
   background: white;
   border: 1px solid #ccc;
-  z-index: 1000;
+  /* z-index: 1000; */
   max-height: 200px;
   overflow-y: auto;
   position: absolute;
@@ -78,10 +78,10 @@ button {
 
 .squareInfo{
   background-color: #7b6d6d6b; 
-  padding-top: 18px;
+  /* padding-top: 18px;
   padding-bottom: 18px;
   margin-right: 222px;
-  margin-left: 222px;
+  margin-left: 222px; */
 }
 
 .heartContainer {

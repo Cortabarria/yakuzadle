@@ -23,3 +23,8 @@
 .image-container:hover .hover-text {
   visibility: visible;
 }
+
+.img{
+  height: 5vw;
+  width: 5vw;
+}

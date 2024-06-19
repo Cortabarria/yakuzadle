@@ -18,7 +18,9 @@
   flex: 1;
   margin-right: 30px;
   background-color: gainsboro;
-  height: 100px;
+  /* /* height: 30%; */
+  min-height: 100px; 
+  height: 5vw;
 }
 
 .squareheader {
@@ -39,8 +41,8 @@
   letter-spacing: 0.4px;
   flex: 1;
   margin-right: 30px;
-  background-color: rgb(134, 131, 131);
-  height: 50px;
+  background-color: rgb(204, 204, 204);
+  height: 2vw;
 }
 
 .squareheader-name {
@@ -70,6 +72,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  margin-bottom: 400px;
+
 }
 
 .failed-attempt {
@@ -129,7 +134,6 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  width: 90%;
 }
 
 
@@ -138,7 +142,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 95%;
+  /* width: 95%; */
+  width:75%;
 }
 
 .background-header-square {
@@ -186,4 +191,8 @@
 
 .image-container:hover .hover-text {
   visibility: visible;
+}
+
+.change{
+  /* margin-left: 10%; */
 }
