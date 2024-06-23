@@ -14,11 +14,7 @@ root.render(
   <React.StrictMode>
     <div
       style={{
-        backgroundImage: "url(images/assets/background2.png)",
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-        height: "100vh",
-        overflow: "auto",
+
       }}
     >
       <BrowserRouter>

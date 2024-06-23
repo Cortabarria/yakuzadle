@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "name": "Kiryu Kazuma",
+    "sex": "Male",
+    "affiliation": "Tojo",
+    "hair": ["Black", "Gray"],
+    "height": "184",
+    "dob": "1968",
+    "first_game_appearance": "Yakuza 1",
+    "last_game_appearance": "Like a Dragon: Infinite Wealth",
+    "karaoke": "Yes"
+  },
+  {
+    "id": 2,
+    "name": "Sawamura Haruka",
+    "sex": "Female",
+    "affiliation": "Morning Glory",
+    "hair": ["Black"],
+    "height": "165",
+    "dob": "1996",
+    "first_game_appearance": "Yakuza 1",
+    "last_game_appearance": "Like a Dragon: Infinite Wealth",
+    "karaoke": "Yes"
+  },
+  {
+    "id": 3,
+    "name": "Dojima Daigo",
+    "sex": "Male",
+    "affiliation": ["Punk", "Tojo"],
+    "hair": ["Black"],
+    "height": "185",
+    "dob": "1975",
+    "first_game_appearance": "Yakuza 2",
+    "last_game_appearance": "Like a Dragon: Infinite Wealth",
+    "karaoke": "No"
+  }
+  
+
+]

@@ -73,9 +73,217 @@
   flex-direction: column;
   align-items: center;
   overflow-x: auto; /* Enable horizontal scrolling */
-  margin-bottom: 400px;
+  /* margin-bottom: 400px; */
 
 }
+
+/*--------------------------------------------------*/
+@media only screen and (max-width: 1100px) and (min-width: 1000px){
+  .failed-attempts {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  /* margin-bottom: 400px; */
+
+}
+
+  .imgsqr{
+    margin-right: 6px!important;
+    padding-right: 0px!important;
+    border-right-width: 0px!important;
+    margin-left: 5px!important;
+    padding-left: 0px!important;
+    border-left-width: 0px!important;
+  }
+
+  .img-in-square{
+    height: 9vw;
+    width: 7vw;
+  }
+}
+
+
+@media only screen and (max-width: 950px) {
+  .failed-attempts {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  /* margin-bottom: 400px; */
+
+}
+
+  .imgsqr{
+    padding-right: 0px !important;
+    border-right-width: 0px !important;
+    padding-left: 0px !important;
+    border-left-width: 0px !important;
+  }
+
+  .img-in-square{
+    height: 11vw;
+    width: 8vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .failed-attempts {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  /* margin-bottom: 400px; */
+
+}
+
+  .imgsqr{
+    padding-right: 0px !important;
+    border-right-width: 0px !important;
+    padding-left: 0px !important;
+    border-left-width: 0px !important;
+  }
+
+  .img-in-square{
+    height: 11vw;
+    width: 9vw;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .failed-attempts {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  /* margin-bottom: 400px; */
+}
+
+  .imgsqr{
+    padding-right: 0px !important;
+    border-right-width: 0px !important;
+    padding-left: 0px !important;
+    border-left-width: 0px !important;
+  }
+
+  .img-in-square{
+    height: 13vw;
+    width: 10vw;
+  }
+
+  .squareheader {
+    height: 3vw;
+}
+
+}
+
+@media only screen and (max-width: 600px) {
+  .failed-attempts {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  /* margin-bottom: 400px; */
+  padding-left: 70%;
+}
+
+  .imgsqr{
+    padding-right: 0px !important;
+    border-right-width: 0px !important;
+    padding-left: 0px !important;
+    border-left-width: 0px !important;
+  }
+
+  .img-in-square{
+    height: 24vw;
+    width: 18vw;
+  }
+
+  .squareheader {
+  height: 12vw;
+}
+
+}
+
+@media only screen and (max-width: 390px) {
+  .failed-attempts {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  /* margin-bottom: 400px; */
+  padding-left: 80%;
+
+}
+
+.imgsqr{
+  padding-right: 0px !important;
+  border-right-width: 0px !important;
+  padding-left: 0px !important;
+  border-left-width: 0px !important;
+}
+
+.img-in-square{
+  height: 26vw;
+  width: 18vw;
+}
+
+}
+
+@media only screen and (max-width: 375px) {
+  .failed-attempts {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  /* margin-bottom: 400px; */
+  padding-left: 90%;
+}
+
+.failed-attempt {
+  display: flex;
+  justify-content: space-between;
+  /*background-color: #f2f2f2;
+  /* border: 1px solid #000000; */
+  width: 90%;
+  margin-right: 20px;
+}
+
+  .failed-attempt p {
+  white-space: nowrap;
+  /* border-right: 2px solid #000000; */
+  box-sizing: border-box;
+  flex: 1;
+  text-align: center;
+  white-space: break-spaces;
+  font-size: 2vh; 
+/*  font-size: 13px;
+*/
+}
+
+.imgsqr{
+  padding-right: 0px !important;
+  border-right-width: 0px !important;
+  padding-left: 0px !important;
+  border-left-width: 0px !important;
+}
+
+.img-in-square{
+  height: 27vw;
+  width: 20vw;
+}
+
+
+}
+
+/*------------------------*/
 
 .failed-attempt {
   display: flex;
@@ -88,7 +296,7 @@
 
 .failed-attempt p {
   margin: 2px;
-  padding: 10px;
+  /* padding: 10px; */
   white-space: nowrap;
   /* border-right: 2px solid #000000; */
   box-sizing: border-box;
@@ -143,7 +351,8 @@
   flex-direction: column;
   align-items: center;
   /* width: 95%; */
-  width:75%;
+  /* width:75%; */
+  width: 50%;
 }
 
 .background-header-square {
@@ -162,7 +371,7 @@
 }
 
 .result{
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -186,7 +395,7 @@
   bottom: 0;
   left: 0;
   padding: 10px 0;
-  font-size: 1.5vh;
+  font-size: 1vh;
 }
 
 .image-container:hover .hover-text {
@@ -195,4 +404,28 @@
 
 .change{
   /* margin-left: 10%; */
+}
+
+.reveal{
+  overflow-y: hidden;
+  /*
+  So the square of the answer revealead doesnt get weird when you click on the karaoke "?"   
+  */
+}
+
+
+.image-container:hover .hover-text {
+  display: block;
+}
+
+
+/* -------------------------- */
+.imgsqr{
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-Content: center;
+  align-Items: center;
+  color: white;
 }

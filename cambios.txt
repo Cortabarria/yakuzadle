@@ -19,3 +19,84 @@ Se agrego esto para garantizar una buena visual de los cuadraditos
 }
 
 Se agregaron vw y vh
+
+
+        backgroundImage: "url(images/assets/background2.png)",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+        height: "100vh",
+        overflow: "auto",
+
+        background: url("images/assets/background2.png") center center no-repeat fixed;
+
+Agregado en el index.css
+body{
+  background: url("images/assets/background2.png") center center no-repeat fixed;
+      background-size: auto;
+    background-size: cover;
+}
+
+
+Se agrego los diferentes tipos de pantallas. 
+header.css y styles.css
+FailedAttempts con sus headers para scrollear hacia der y izquierda
+El Yakuzadle header ahora reacciona con el tamaño de la pantalla
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 390px) {
+}
+
+@media only screen and (max-width: 375px) {
+}
+
+AGREGAR EL PERSONAJE QUE SE TE REVELA AL PERDER EN LA GRID NORMAL
+
+-------------------------------------------------------------------------------------------------------------------------------------
+20/6/2024
+
+Agregado, para que no se vuelva loco el personaje que te muestran cuando perdes y abris el karaoke 
+.reveal{
+    overflow-y: hidden;
+}
+
+Quitado display-flex porque arruinaba la pantalla
+.result{
+  /* display: flex; */
+}
+
+Quitado el margin-bottom 
+.failed-attempts {
+ /* margin-bottom: 400px; */
+}
+
+
+Se quito esto porque hacia que se corte el juego en que aparecio cuando se miraba en pantallas mas chicas
+word-break: break-all; 
+
+
+Agregado en 375
+.imgsqr{
+  padding-right: 0px !important;
+  border-right-width: 0px !important;
+  padding-left: 0px !important;
+  border-left-width: 0px !important;
+}
+
+----------------------------------------------------------------------
+21/6
+
+Se agrego los diferentes estilos de pantallas de 
+.squareheader {
+
+}
+
+* REVISAR: ARESHI Y FEI HU IGUALES
+
+SE PUSO COMO IMAGEN BACKGROUND LA FOTO DE PERFIL DEL SQUARE PRIMERO
+
+VER LO DE BACKGROUND Y PONERLE BIEN LOS BORDES Y SACAR TODA LA OTRA GILADA QUE SE PUSO EN BASE A ESO  
+----------------------------------------------------------------------
+23/6
+Bajarle a container-outer a 50% el width, asi se ve mejor tanto la imagen del pj como la lectura de los cuadros
+Se cambio el tamaño de hover-text a 1, para que sea mas legible 

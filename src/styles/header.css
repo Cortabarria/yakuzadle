@@ -10,3 +10,27 @@
   font-size: 5rem; 
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
 }
+
+@media only screen and (max-width: 600px) {
+  .header-title {
+    color: rgb(238, 56, 56);
+    font-size: 5rem; 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .header-title {
+    color: rgb(238, 56, 56);
+    font-size: 5rem; 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .header-title {
+    color: rgb(238, 56, 56);
+    font-size: 3.5rem; 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+  }
+}

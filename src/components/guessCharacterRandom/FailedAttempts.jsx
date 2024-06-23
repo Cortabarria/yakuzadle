@@ -8,10 +8,7 @@ function FailedAttempts({ state, randomCharacter, score }) {
   }
 
   return (
-    <div
-      className={`failed-attempts ${score === -5 ? "dark-blue" : ""}`}
-      id="failedAttempts"
-    >
+    <div className={`failed-attempts`} id="failedAttempts">
       <TableHeaders />
       {state.failedAttempts
         .slice()
@@ -70,18 +67,22 @@ function FailedAttempts({ state, randomCharacter, score }) {
           return (
             <div className="boxy container-outer" key={index}>
               <div className="failed-attempt groupGuessesAnswersRow">
-                <p className="squareanswer" style={{ fontSize: "1.5vh" }}>
-                  <div className="image-container">
-                    <img
-                      src="images/charactersPortraits/kazzy.png"
-                      height="5vh"
-                      width="5vw"
-                      alt={person.name}
-                      className="hover-image img"
-                    />
-                    <div className="hover-text">{person.name}</div>
-                  </div>
+                <p
+                  className="imgsqr squareanswer image-container"
+                  style={{
+                    fontSize: "1.5vh",
+                    backgroundImage:
+                      "url('images/charactersPortraits/kazzy.png')",
+
+                  }}
+                >
+                  <span
+                    className="hover-text"
+                  >
+                    {person.name}
+                  </span>
                 </p>
+
                 <p
                   className={`attribute ${
                     person.sex === randomCharacter.sex ? "correct" : "incorrect"
@@ -126,7 +127,7 @@ function FailedAttempts({ state, randomCharacter, score }) {
                       ? "correct"
                       : "incorrect"
                   } squareanswer`}
-                  style={{ wordBreak: "break-all" }}
+                  // style={{ wordBreak: "break-all" }}
                 >
                   {person.last_game_appearance}
                 </p>
@@ -146,6 +147,19 @@ function FailedAttempts({ state, randomCharacter, score }) {
         })}
     </div>
   );
+}
+
+function changeVisualCharacter(score){
+  console.log(score);
+  const elements = document.querySelectorAll('.squareanswer');
+
+  elements.forEach((element, index) => {
+    if (index < 9 && score === -2) {
+      element.classList.add('loser');
+    }
+  });
+
+
 }
 
 export default FailedAttempts;

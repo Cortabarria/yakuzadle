@@ -17,14 +17,47 @@
   bottom: 10;
   left: 0;
   padding: 10px 0;
-  font-size: 1.5vh;
+  font-size: 1vh;
 }
 
 .image-container:hover .hover-text {
   visibility: visible;
 }
 
-.img{
+.img-in-square{
+  height: 5vw;
+  width: 7vw;
+}
+
+.loser {
+  background-color: rgb(194, 196, 116) !important; 
+}
+
+@media only screen and (max-width: 600px) {
+.img-in-square{
   height: 5vw;
   width: 5vw;
+}
+}
+
+@media only screen and (max-width: 390px) {
+.img-in-square{
+  height: 5vw;
+  width: 5vw;
+}
+}
+
+@media only screen and (max-width: 375px) {
+
+
+}
+
+.imgsqr{
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-Content: center;
+  align-Items: center;
+  color: white;
 }

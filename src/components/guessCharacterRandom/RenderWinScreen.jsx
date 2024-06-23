@@ -20,6 +20,7 @@ function RenderWinScreen({ renderFailedAttempts, randomCharacter }) {
     <div>
       <div id="winner" className="winner myriad-text ">
         {ConfettiWin()}
+        <h1>Congratulations!</h1>
         <ResultInformation randomCharacter={randomCharacter} />
       </div>
       {renderFailedAttempts()}
