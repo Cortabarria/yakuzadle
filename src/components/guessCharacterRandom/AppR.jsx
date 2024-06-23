@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ReturnCharactersJSON } from "../../utils/returnCharactersJSON";
 import { getRandomCharacter } from "../../utils/randomCharacter";
-import RenderWinScreen from "./RenderWinScreen";
-import RenderGuess from "../RenderGuessR";
+import RenderWinScreen from "../conclusion/RenderWinScreen";
+import RenderGuess from "../guessInformation/RenderGuessR";
 import FailedAttempts from "./FailedAttempts";
 
 import "../../styles/styles.css";
 import "../../assets/fonts/fonts.css";
-import RenderLoseScreen from "./RenderLoseScreen";
-import ResultInformation from "../ResultInformation";
+import RenderLoseScreen from "../conclusion/RenderLoseScreen";
+import ResultInformation from "../conclusion/ResultInformation";
 
 function AppR() {
   const [peopleList, setPeopleList] = useState([]);

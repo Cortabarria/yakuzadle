@@ -73,14 +73,9 @@ function FailedAttempts({ state, randomCharacter, score }) {
                     fontSize: "1.5vh",
                     backgroundImage:
                       "url('images/charactersPortraits/kazzy.png')",
-
                   }}
                 >
-                  <span
-                    className="hover-text"
-                  >
-                    {person.name}
-                  </span>
+                  <span className="hover-text">{person.name}</span>
                 </p>
 
                 <p
@@ -100,7 +95,7 @@ function FailedAttempts({ state, randomCharacter, score }) {
                       : "incorrect"
                   } squareanswer`}
                 >
-                  {person.hair}
+                  {person.hair.join(" / ")}
                 </p>
 
                 <p className={`attribute ${higClass} squareanswer`}>

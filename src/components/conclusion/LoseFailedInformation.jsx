@@ -1,7 +1,7 @@
 // FailedAttempts.jsx
 import React from "react";
-import "./guessCharacterRandom/TableHeaders";
-import TableHeaders from "./guessCharacterRandom/TableHeaders";
+import "../guessCharacterRandom/TableHeaders";
+import TableHeaders from "../guessCharacterRandom/TableHeaders";
 
 function LoseFailedInformation({ randomCharacter }) {
   return (
@@ -25,7 +25,9 @@ function LoseFailedInformation({ randomCharacter }) {
             {randomCharacter.affiliation.join(" / ")}
           </p>
 
-          <p className="failed squareanswer">{randomCharacter.hair}</p>
+          <p className="failed squareanswer">
+            {randomCharacter.hair.join(" / ")}
+          </p>
 
           <p className="failed squareanswer">{randomCharacter.height}</p>
 

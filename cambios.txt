@@ -96,7 +96,19 @@ Se agrego los diferentes estilos de pantallas de
 SE PUSO COMO IMAGEN BACKGROUND LA FOTO DE PERFIL DEL SQUARE PRIMERO
 
 VER LO DE BACKGROUND Y PONERLE BIEN LOS BORDES Y SACAR TODA LA OTRA GILADA QUE SE PUSO EN BASE A ESO  
+
 ----------------------------------------------------------------------
 23/6
 Bajarle a container-outer a 50% el width, asi se ve mejor tanto la imagen del pj como la lectura de los cuadros
 Se cambio el tamaño de hover-text a 1, para que sea mas legible 
+
+- SE AGREGO EL FOOTER. Info de SEGA y si no hay un personaje, avisar. 
+
+Al button-mode se le agrega width: 80% para que en los celulares se vea bien ya que algunos hace que se pueda scrollear para la X cuando no se deberia 
+
+Se agrego la carpeta "conclusion" donde va la Win y Lose screen. Tambien se puso ResultInformation que muestra el personaje que era.
+Ademas se puso LoseFailedInformation donde es utilizado para LoseScreen para mostrar los valores del personaje que era
+
+RenderGuessR se movio a guessInformation junto a heartShower, ya que serviran para todos los guess.
+
+Se agrego la posibilidad de que el personaje tenga varios pelos, como es el caso de Affiliation.

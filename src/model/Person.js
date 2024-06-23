@@ -17,7 +17,7 @@ class Person {
     this.name = name;
     this.sex = sex;
     this.affiliation = Array.isArray(affiliation) ? affiliation : [affiliation];
-    this.hair = hair;
+    this.hair = Array.isArray(hair) ? hair : [hair];;
     this.eye = eye;
     this.height = height;
     this.dob = dob;

@@ -8,8 +8,8 @@ import {
   ListItemAvatar,
   ListItemText,
 } from "@mui/material";
-import "../styles/input.css";
-import heartShower from "./guessInformation/heartShower";
+import "../../styles/input.css";
+import heartShower from "./heartShower";
 
 function RenderGuess({
   state,

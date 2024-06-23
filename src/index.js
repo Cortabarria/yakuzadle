@@ -4,10 +4,11 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 
 import AppR from "./components/guessCharacterRandom/AppR";
-import Header from "./components/Header";
+import Header from "./components/layout/Header";
 import MainMenu from "./components/MainMenu";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
+import Footer from "./components/layout/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -20,6 +21,7 @@ root.render(
       <BrowserRouter>
         <Header />
         <MainMenu />
+        <Footer/>
       </BrowserRouter>
     </div>
   </React.StrictMode>
