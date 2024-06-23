@@ -112,3 +112,9 @@ Ademas se puso LoseFailedInformation donde es utilizado para LoseScreen para mos
 RenderGuessR se movio a guessInformation junto a heartShower, ya que serviran para todos los guess.
 
 Se agrego la posibilidad de que el personaje tenga varios pelos, como es el caso de Affiliation.
+
+-x-
+Se agrego la logica de la imagen del personaje en el buscador; la imagen se buscara en images/charactersPortraits
+Esta logica se paso al componente ImageBringer.jsx.
+
+Se cambio un poco el footer, ya que anteriormente tapaba lo que tenia encima si estaba muy abajo. No es un footer como se conoce, sino es info al final.

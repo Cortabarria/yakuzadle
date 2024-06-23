@@ -9,7 +9,9 @@ import {
   ListItemText,
 } from "@mui/material";
 import "../../styles/input.css";
-import heartShower from "./heartShower";
+import heartShower from "./HeartShower";
+import getBackgroundImage from "../guessInformation/ImageBringer";
+
 
 function RenderGuess({
   state,
@@ -100,7 +102,8 @@ function RenderGuess({
       <ListItemAvatar>
         <Avatar
           alt={option.name}
-          src={`icon.png`}
+          src={getBackgroundImage(option)}
+          // src={`images/charactersPortraits/${option.name}.png`}
           sx={{ height: "100px", width: "100px", marginRight: "30px" }}
           variant="square"
         />

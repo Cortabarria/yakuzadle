@@ -1,4 +1,4 @@
-function heartShower(count) {
+function HeartShower(count) {
   const total = count;
   const heartCount = 10 + total;
   const heart2Count = 10 - heartCount;
@@ -27,4 +27,4 @@ function heartShower(count) {
   );
 };
 
-export default heartShower;
+export default HeartShower;

@@ -2,6 +2,8 @@ import React from "react";
 import TableHeaders from "./TableHeaders";
 import "../../styles/FailedAttempts.css";
 
+import getBackgroundImage from "../guessInformation/ImageBringer";
+
 function FailedAttempts({ state, randomCharacter, score }) {
   if (state.failedAttempts.length === 0) {
     return null;
@@ -64,6 +66,7 @@ function FailedAttempts({ state, randomCharacter, score }) {
             affiliationClass = "incorrect";
           }
 
+
           return (
             <div className="boxy container-outer" key={index}>
               <div className="failed-attempt groupGuessesAnswersRow">
@@ -71,8 +74,9 @@ function FailedAttempts({ state, randomCharacter, score }) {
                   className="imgsqr squareanswer image-container"
                   style={{
                     fontSize: "1.5vh",
-                    backgroundImage:
-                      "url('images/charactersPortraits/kazzy.png')",
+                    backgroundImage: `url("${getBackgroundImage(person)}")`,
+
+                    // backgroundImage: `url('images/charactersPortraits/rgg.png')`,
                   }}
                 >
                   <span className="hover-text">{person.name}</span>
@@ -144,17 +148,5 @@ function FailedAttempts({ state, randomCharacter, score }) {
   );
 }
 
-function changeVisualCharacter(score){
-  console.log(score);
-  const elements = document.querySelectorAll('.squareanswer');
-
-  elements.forEach((element, index) => {
-    if (index < 9 && score === -2) {
-      element.classList.add('loser');
-    }
-  });
-
-
-}
 
 export default FailedAttempts;

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Kiryu Kazuma",
+    "name": "Kazuma Kiryu",
     "sex": "Male",
     "affiliation": "Tojo",
     "hair": ["Black"],
@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "name": "Sawamura Haruka",
+    "name": "Haruka Sawamura",
     "sex": "Female",
     "affiliation": "Morning Glory",
     "hair": ["Black"],
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "name": "Dojima Daigo",
+    "name": "Daigo Dojima",
     "sex": "Male",
     "affiliation": "Tojo",
     "hair": "Black",
@@ -37,7 +37,7 @@
   },
   {
     "id": 4,
-    "name": "Majima Goro",
+    "name": "Goro Majima",
     "sex": "Male",
     "affiliation": "Tojo",
     "hair": ["Black"],

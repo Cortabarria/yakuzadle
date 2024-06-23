@@ -114,7 +114,7 @@ function AppR() {
   }
 
   // Render the lose screen if the score is -10
-  if (state.score === -2) {
+  if (state.score === -10) {
     return (
       <RenderLoseScreen
         state={state}
