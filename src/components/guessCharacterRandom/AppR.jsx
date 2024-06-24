@@ -1,3 +1,4 @@
+// AppR.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { ReturnCharactersJSON } from "../../utils/returnCharactersJSON";
 import { getRandomCharacter } from "../../utils/randomCharacter";
@@ -8,11 +9,14 @@ import FailedAttempts from "./FailedAttempts";
 import "../../styles/styles.css";
 import "../../assets/fonts/fonts.css";
 import RenderLoseScreen from "../conclusion/RenderLoseScreen";
-import ResultInformation from "../conclusion/ResultInformation";
+import { getStaminanRoyale } from "../help/createCharacter";
+
+import StaminanButton from "../help/StaminanButton";
 
 function AppR() {
   const [peopleList, setPeopleList] = useState([]);
   const [randomCharacter, setRandomCharacter] = useState(null);
+
 
   // useRef to track whether the initialization has been done
   const hasInitialized = useRef(false);
@@ -39,6 +43,7 @@ function AppR() {
     incorrect: false,
     isValidSelection: false,
     failedAttempts: [],
+    sharedAttributes: {}, // New state to store shared attributes
   });
 
   // Wait until randomCharacter is set before rendering
@@ -73,6 +78,25 @@ function AppR() {
       );
     }
 
+    // Compare attributes
+    const newSharedAttributes = {};
+    if (selectedCharacter) {
+      Object.keys(randomCharacter).forEach((key) => {
+        if (randomCharacter[key] === selectedCharacter[key]) {
+          newSharedAttributes[key] = randomCharacter[key];
+        }
+      });
+    }
+
+    // Merge new shared attributes with existing ones
+    const updatedSharedAttributes = {
+      ...state.sharedAttributes,
+      ...newSharedAttributes,
+    };
+
+    // Log shared attributes to the console
+    // console.log("Shared attributes:", updatedSharedAttributes);
+
     // Check if the answer is correct
     if (answer.toLowerCase() === randomCharacter.name.toLowerCase()) {
       setState((prevState) => ({
@@ -85,6 +109,7 @@ function AppR() {
         failedAttempts: selectedCharacter
           ? [...prevState.failedAttempts, selectedCharacter]
           : prevState.failedAttempts,
+        sharedAttributes: updatedSharedAttributes, // Update shared attributes
       }));
     } else {
       setState((prevState) => ({
@@ -97,10 +122,20 @@ function AppR() {
         failedAttempts: selectedCharacter
           ? [...prevState.failedAttempts, selectedCharacter]
           : prevState.failedAttempts,
+        sharedAttributes: updatedSharedAttributes, // Update shared attributes
       }));
     }
   }
 
+  // Help button to show a attribute that you didnt get
+  /*
+  if (state.score === -2) {
+    // console.log(createCharacterFromAttributes(state.sharedAttributes).greet());
+    console.log(
+      getStaminanRoyale(state.sharedAttributes, randomCharacter).greet()
+    );
+  }
+*/
   // Render the win screen if the score is 1
   if (state.score === 1) {
     return (
@@ -136,18 +171,19 @@ function AppR() {
   // Render the guessing interface otherwise
   else {
     return (
+      
       <RenderGuess
+      state={state}
+      handleInputChange={handleInputChange}
+      checkAnswer={checkAnswer}
+      peopleList={peopleList}
+      renderFailedAttempts={() => (
+        <FailedAttempts
         state={state}
-        handleInputChange={handleInputChange}
-        checkAnswer={checkAnswer}
-        peopleList={peopleList}
-        renderFailedAttempts={() => (
-          <FailedAttempts
-            state={state}
-            randomCharacter={randomCharacter}
-            score={state.score}
-          />
-        )}
+        randomCharacter={randomCharacter}
+        score={state.score}
+        />
+      )}
       />
     );
   }

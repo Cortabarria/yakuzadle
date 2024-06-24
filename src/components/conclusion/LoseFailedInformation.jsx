@@ -2,6 +2,7 @@
 import React from "react";
 import "../guessCharacterRandom/TableHeaders";
 import TableHeaders from "../guessCharacterRandom/TableHeaders";
+import getBackgroundImage from "../guessInformation/ImageBringer.jsx";
 
 function LoseFailedInformation({ randomCharacter }) {
   return (
@@ -13,7 +14,10 @@ function LoseFailedInformation({ randomCharacter }) {
             className="imgsqr squareanswer image-container"
             style={{
               fontSize: "1.5vh",
-              backgroundImage: "url('images/charactersPortraits/kazzy.png')",
+              
+              backgroundImage: `url("${getBackgroundImage(randomCharacter)}")`,
+
+              // backgroundImage: `url('images/charactersPortraits/${randomCharacter.name}.png')`,
             }}
           >
             <span className="hover-text">{randomCharacter.name}</span>

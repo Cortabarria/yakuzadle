@@ -17,7 +17,7 @@ class Person {
     this.name = name;
     this.sex = sex;
     this.affiliation = Array.isArray(affiliation) ? affiliation : [affiliation];
-    this.hair = Array.isArray(hair) ? hair : [hair];;
+    this.hair = Array.isArray(hair) ? hair : [hair];
     this.eye = eye;
     this.height = height;
     this.dob = dob;
@@ -29,7 +29,13 @@ class Person {
   greet() {
     return `Hello, my name is ${this.name}, I am ${
       this.sex
-    }, and I am affiliated with ${this.affiliation.join(", ")}.`;
+    }, I have ${this.hair.join(", ")} hair, my eyes are ${this.eye}, I am ${
+      this.height
+    } tall, I was born on ${this.dob}, my first game appearance was in ${
+      this.first_game_appearance
+    }, my last game appearance was in ${
+      this.last_game_appearance
+    } and my favorite karaoke song is ${this.karaoke}.`;
   }
 }
 

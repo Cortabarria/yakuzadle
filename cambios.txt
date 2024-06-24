@@ -118,3 +118,10 @@ Se agrego la logica de la imagen del personaje en el buscador; la imagen se busc
 Esta logica se paso al componente ImageBringer.jsx.
 
 Se cambio un poco el footer, ya que anteriormente tapaba lo que tenia encima si estaba muy abajo. No es un footer como se conoce, sino es info al final.
+
+-----------------------------------------------------------------------------
+24/6
+Se arreglo la imagen que aparecia en Result Information, haciendo que tenga el mismo tamaño para todas las imagenes
+
+Se agrego agarrar atributos que compartan el personaje seleccionado con el que hay que adivinar. Esto servira para hacer lo de la pista.
+Se agrego esta logica en help/createCharacter.js y sus diferentes funciones, esto es con el proposito de poner una pista para el usuario
