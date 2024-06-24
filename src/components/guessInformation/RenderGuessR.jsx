@@ -9,7 +9,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import "../../styles/input.css";
-import heartShower from "./HeartShower";
+import heartShower from "./heartShower";
 import getBackgroundImage from "../guessInformation/ImageBringer";
 
 

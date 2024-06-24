@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AnimatedImage from "../animation/AnimatedImage.js"
+import getBackgroundImage from "../guessInformation/ImageBringer.jsx";
 
 function ResultInformation({ randomCharacter }){
     return (
@@ -11,7 +12,7 @@ function ResultInformation({ randomCharacter }){
         </h2>
         
         <AnimatedImage
-          src={`./images/charactersPortraits/${randomCharacter.id}.jpg`}
+          src={getBackgroundImage(randomCharacter)}
           alt={`Image of ${randomCharacter.name}`}
         />
       </div>
