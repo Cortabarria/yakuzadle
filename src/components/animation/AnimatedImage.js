@@ -4,7 +4,7 @@ import "./ImageAnimation.css";
 const AnimatedImage = ({ src, alt }) => {
   return (
     <div className="image-container">
-      <img src={src} alt={alt} className="animated-image" style={{width: "300px", height: "300px" } } />
+      <img src={src} alt={alt} className="animated-image" style={{width: "200px", height: "200px" } } />
     </div>
   );
 };

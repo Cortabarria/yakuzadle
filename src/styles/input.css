@@ -18,6 +18,7 @@
   gap: 10px;
  /* margin-bottom: 30px; */
   position: relative;
+  flex-wrap: wrap;
 }
 
 ::placeholder {

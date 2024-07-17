@@ -17,5 +17,5 @@
 }
 
 .myriad-text {
-  font-family: "MyriadPro-Light", sans-serif ;
+  font-family: "MyriadPro-Light", sans-serif !important; 
 }

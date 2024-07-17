@@ -1,4 +1,4 @@
-import React from "react";
+import {React, StrictMode } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
@@ -12,19 +12,15 @@ import Footer from "./components/layout/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <div
-      style={{
-
-      }}
-    >
+  <div>
+    <StrictMode>
       <BrowserRouter>
         <Header />
         <MainMenu />
-        <Footer/>
+        <Footer />
       </BrowserRouter>
-    </div>
-  </React.StrictMode>
+    </StrictMode>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function

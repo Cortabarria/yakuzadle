@@ -1,6 +1,13 @@
 
 function getBackgroundImage(person) {
-  const imageUrl = `images/charactersPortraits/${person.name}.png`;
+  if(person.name == "Staminan Royale"){
+    const imageUrl = `images/charactersPortraits/Staminan Royale.webp`;
+    return imageUrl;
+  }
+  const imageUrl = `images/charactersPortraits/${person.first_game_appearance}/${person.name}.webp`;
+  return imageUrl;
+
+  //Muy compli hacer funcionar bien esto. Ahora siempre trae la imagen y si no, devuelve una letra de la inicial
 
   // Create an image object to check if the image exists
   const img = new Image();

@@ -2,17 +2,20 @@ import Person from "../../model/Person";
 
 // Guarda los valores que el usuario ya saco en intentos pasados
 function createCharacterFromAttributes(sharedAttributes) {
+  // console.log(sharedAttributes.affiliation);
   const person = new Person({
     name: "Staminan Royale",
     sex: sharedAttributes.sex || "",
-    affiliation: Array.isArray(sharedAttributes.affiliation)
-      ? sharedAttributes.affiliation
-      : [],
-    hair: Array.isArray(sharedAttributes.hair)
-      ? sharedAttributes.hair
-      : sharedAttributes.hair
-      ? [sharedAttributes.hair]
-      : [],
+    affiliation: sharedAttributes.affiliation,
+    // affiliation: Array.isArray(sharedAttributes.affiliation)
+    //   ? sharedAttributes.affiliation
+    //   : [],
+    // hair: Array.isArray(sharedAttributes.hair)
+    //   ? sharedAttributes.hair
+    //   : sharedAttributes.hair
+    //   ? [sharedAttributes.hair]
+    //   : [],
+    hair: sharedAttributes.hair,
     eye: sharedAttributes.eye || "",
     height: sharedAttributes.height || "",
     dob: sharedAttributes.dob || "",
@@ -35,6 +38,10 @@ function difference(character, random) {
         }
 
         if (random[prop] !== character[prop]) {
+            // console.log(prop);
+            // console.log(random[prop]);
+            // console.log(character[prop]);
+
             differingAttributes.push({ attribute: prop, value: random[prop] });
         }
     }
@@ -57,11 +64,6 @@ function getRandomDifferingAttribute(differingAttributes) {
 
   return createPersonWithRandomAttribute(differingAttributes[randomIndex]);
 }
-
-
-
-
-
 
 // Crea el personaje que se mostrara en la pantalla con el valor random
 function createPersonWithRandomAttribute(randomDifferingAttribute) {
@@ -86,10 +88,10 @@ function createPersonWithRandomAttribute(randomDifferingAttribute) {
       person.sex = randomDifferingAttribute.value;
       break;
     case "affiliation":
-      person.affiliation.push(randomDifferingAttribute.value);
+      person.affiliation = randomDifferingAttribute.value;
       break;
     case "hair":
-      person.hair.push(randomDifferingAttribute.value);
+      person.hair = randomDifferingAttribute.value;
       break;
     case "eye":
       person.eye = randomDifferingAttribute.value;

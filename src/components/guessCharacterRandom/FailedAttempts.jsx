@@ -1,58 +1,71 @@
-import React from "react";
+import React, { memo } from "react";
 import TableHeaders from "./TableHeaders";
 import "../../styles/FailedAttempts.css";
 
 import getBackgroundImage from "../guessInformation/ImageBringer";
+import { arraysEqual } from "../../utils/utilFunction";
 
-function FailedAttempts({ state, randomCharacter, score }) {
-  if (state.failedAttempts.length === 0) {
+const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
+  if (failedAttempts.length === 0) {
     return null;
   }
 
   return (
     <div className={`failed-attempts`} id="failedAttempts">
       <TableHeaders />
-      {state.failedAttempts
+      {failedAttempts
         .slice()
         .reverse()
         .map((person, index) => {
+
+
+
           let dobClass = "";
           let higClass = "";
 
           // Year
-          if (randomCharacter.dob === person.dob) {
-            dobClass = "same-dob-green";
+          if (person.dob.length === 0) {
+            dobClass = "incorrect";
           } else {
-            if (randomCharacter.dob !== "?" && person.dob !== "?") {
-              if (person.dob > randomCharacter.dob) {
-                dobClass = "higher-dob";
-              } else if (person.dob < randomCharacter.dob) {
-                dobClass = "lower-dob";
-              }
+            if (randomCharacter.dob === person.dob) {
+              dobClass = "same-dob-green";
             } else {
-              dobClass = "incorrect";
+              if (randomCharacter.dob !== "?" && person.dob !== "?") {
+                if (person.dob > randomCharacter.dob) {
+                  dobClass = "higher-dob";
+                } else if (person.dob < randomCharacter.dob) {
+                  dobClass = "lower-dob";
+                }
+              } else {
+                dobClass = "incorrect";
+              }
             }
           }
 
           // Height
-          if (person.height === randomCharacter.height) {
-            higClass = "same-dob-green";
+          if (person.height.length === 0) {
+            higClass = "incorrect";
           } else {
-            if (randomCharacter.height !== "?" && person.height !== "?") {
-              if (person.height > randomCharacter.height) {
-                higClass = "higher-dob";
-              } else if (person.height < randomCharacter.height) {
-                higClass = "lower-dob";
-              }
+            if (person.height === randomCharacter.height) {
+              higClass = "same-dob-green";
             } else {
-              higClass = "incorrect";
+              if (randomCharacter.height !== "?" && person.height !== "?") {
+                if (person.height > randomCharacter.height) {
+                  higClass = "higher-dob";
+                } else if (person.height < randomCharacter.height) {
+                  higClass = "lower-dob";
+                }
+              } else {
+                higClass = "incorrect";
+              }
             }
           }
 
           // Check if affiliations match
-          const fullMatch =
-            JSON.stringify(person.affiliation) ===
-            JSON.stringify(randomCharacter.affiliation);
+          const fullMatch = arraysEqual(
+            person.affiliation,
+            randomCharacter.affiliation
+          );
           const partialMatch = person.affiliation.some((aff) =>
             randomCharacter.affiliation.includes(aff)
           );
@@ -66,6 +79,20 @@ function FailedAttempts({ state, randomCharacter, score }) {
             affiliationClass = "incorrect";
           }
 
+          // Check if hair match
+          const fullMatchHair = arraysEqual(person.hair, randomCharacter.hair);
+          const partialMatchHair = person.hair.some((har) =>
+            randomCharacter.hair.includes(har)
+          );
+
+          let hairClass = "";
+          if (fullMatchHair) {
+            hairClass = "correct";
+          } else if (partialMatchHair) {
+            hairClass = "partial-match";
+          } else {
+            hairClass = "incorrect";
+          }
 
           return (
             <div className="boxy container-outer" key={index}>
@@ -92,13 +119,18 @@ function FailedAttempts({ state, randomCharacter, score }) {
                 <p className={`attribute ${affiliationClass} squareanswer`}>
                   {person.affiliation.join(" / ")}
                 </p>
-                <p
+
+                {/* <p
                   className={`attribute ${
-                    person.hair === randomCharacter.hair
+                    person.hair == randomCharacter.hair
                       ? "correct"
                       : "incorrect"
                   } squareanswer`}
                 >
+                  {person.hair.join(" / ")}
+                </p> */}
+
+                <p className={`attribute ${hairClass} squareanswer`}>
                   {person.hair.join(" / ")}
                 </p>
 
@@ -146,7 +178,7 @@ function FailedAttempts({ state, randomCharacter, score }) {
         })}
     </div>
   );
-}
+});
 
 
 export default FailedAttempts;

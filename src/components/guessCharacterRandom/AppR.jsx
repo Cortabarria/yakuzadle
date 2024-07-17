@@ -1,4 +1,3 @@
-// AppR.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { ReturnCharactersJSON } from "../../utils/returnCharactersJSON";
 import { getRandomCharacter } from "../../utils/randomCharacter";
@@ -11,15 +10,21 @@ import "../../assets/fonts/fonts.css";
 import RenderLoseScreen from "../conclusion/RenderLoseScreen";
 import { getStaminanRoyale } from "../help/createCharacter";
 
-import StaminanButton from "../help/StaminanButton";
+import BasicModal from "../modal/modalStaminan";
+import WantToUseModal from "../modal/ModalUseStaminan";
+
+import { arraysEqual } from "../../utils/utilFunction";
+
 
 function AppR() {
   const [peopleList, setPeopleList] = useState([]);
   const [randomCharacter, setRandomCharacter] = useState(null);
-
-
+  const [isModalNoClueToGiveOpen, setIsModalNoClueToGiveOpen] = useState(false); // State to control the modal visibility
+  const [isModalWantToUseOpen, setIsModalWantToUseOpen] = useState(false); // State to control the modal visibility
   // useRef to track whether the initialization has been done
   const hasInitialized = useRef(false);
+
+  let audioChupando = new Audio('./audio/drink.mp3');
 
   useEffect(() => {
     // Check if the initialization has not been done yet
@@ -44,6 +49,7 @@ function AppR() {
     isValidSelection: false,
     failedAttempts: [],
     sharedAttributes: {}, // New state to store shared attributes
+    staminanUsed: false, // New state to track Staminan button usage
   });
 
   // Wait until randomCharacter is set before rendering
@@ -82,7 +88,18 @@ function AppR() {
     const newSharedAttributes = {};
     if (selectedCharacter) {
       Object.keys(randomCharacter).forEach((key) => {
-        if (randomCharacter[key] === selectedCharacter[key]) {
+        let isEqual;
+        if (
+          Array.isArray(randomCharacter[key]) &&
+          Array.isArray(selectedCharacter[key])
+        ) {
+          isEqual = arraysEqual(randomCharacter[key], selectedCharacter[key]);
+        } else {
+          isEqual = randomCharacter[key] === selectedCharacter[key];
+        }
+
+        if (isEqual) {
+          // console.log(key);
           newSharedAttributes[key] = randomCharacter[key];
         }
       });
@@ -93,9 +110,6 @@ function AppR() {
       ...state.sharedAttributes,
       ...newSharedAttributes,
     };
-
-    // Log shared attributes to the console
-    // console.log("Shared attributes:", updatedSharedAttributes);
 
     // Check if the answer is correct
     if (answer.toLowerCase() === randomCharacter.name.toLowerCase()) {
@@ -127,22 +141,39 @@ function AppR() {
     }
   }
 
-  // Help button to show a attribute that you didnt get
-  /*
-  if (state.score === -2) {
-    // console.log(createCharacterFromAttributes(state.sharedAttributes).greet());
-    console.log(
-      getStaminanRoyale(state.sharedAttributes, randomCharacter).greet()
-    );
+  function openModalToGetHelp() {
+    setIsModalWantToUseOpen(true); 
   }
-*/
+
+  function handleStaminanClick() {
+    setIsModalWantToUseOpen(false); 
+
+    if (!state.staminanUsed) {
+      const staminanCharacter = getStaminanRoyale(
+        state.sharedAttributes,
+        randomCharacter
+      );
+
+      if (staminanCharacter === null) {
+        // console.log("Staminan character is null");
+        setIsModalNoClueToGiveOpen(true); // Open the modal
+      } else {
+        audioChupando.play();
+        setState((prevState) => ({
+          ...prevState,
+          score: prevState.score - 1,
+          failedAttempts: [...prevState.failedAttempts, staminanCharacter],
+          staminanUsed: true,
+        }));
+      }
+    }
+  }
+
   // Render the win screen if the score is 1
   if (state.score === 1) {
     return (
       <RenderWinScreen
-        renderFailedAttempts={() => (
-          <FailedAttempts state={state} randomCharacter={randomCharacter} />
-        )}
+        failedAttempts={state.failedAttempts}
         randomCharacter={randomCharacter}
       />
     );
@@ -152,17 +183,7 @@ function AppR() {
   if (state.score === -10) {
     return (
       <RenderLoseScreen
-        state={state}
-        handleInputChange={handleInputChange}
-        checkAnswer={checkAnswer}
-        peopleList={peopleList}
-        renderFailedAttempts={() => (
-          <FailedAttempts
-            state={state}
-            randomCharacter={randomCharacter}
-            score={state.score}
-          />
-        )}
+        failedAttempts={state.failedAttempts}
         randomCharacter={randomCharacter}
       />
     );
@@ -171,20 +192,29 @@ function AppR() {
   // Render the guessing interface otherwise
   else {
     return (
-      
-      <RenderGuess
-      state={state}
-      handleInputChange={handleInputChange}
-      checkAnswer={checkAnswer}
-      peopleList={peopleList}
-      renderFailedAttempts={() => (
-        <FailedAttempts
-        state={state}
-        randomCharacter={randomCharacter}
-        score={state.score}
+      <>
+        <RenderGuess
+          selectedName={state.selectedName}
+          isValidSelection={state.isValidSelection}
+          staminanUsed={state.staminanUsed}
+          score={state.score}
+          failedAttempts={state.failedAttempts}
+          handleInputChange={handleInputChange}
+          checkAnswer={checkAnswer}
+          peopleList={peopleList}
+          handleStaminanClick={openModalToGetHelp}
+          randomCharacter={randomCharacter}
         />
-      )}
-      />
+        <BasicModal
+          open={isModalNoClueToGiveOpen}
+          handleClose={() => setIsModalNoClueToGiveOpen(false)}
+        />
+        <WantToUseModal
+          open={isModalWantToUseOpen}
+          handleClose={() => setIsModalWantToUseOpen(false)}
+          handleContinue={() => handleStaminanClick()}
+        />
+      </>
     );
   }
 }

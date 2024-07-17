@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ConfettiComponent from "../congratulations/ConfettiComponent";
 import "../../assets/fonts/fonts.css";
 import ResultInformation from "./ResultInformation";
+import FailedAttempts from "../guessCharacterRandom/FailedAttempts";
 
 function ConfettiWin() {
   const [runConfetti, setRunConfetti] = useState(false);
@@ -15,7 +16,8 @@ function ConfettiWin() {
   return <ConfettiComponent runConfetti={runConfetti} />;
 }
 
-function RenderWinScreen({ renderFailedAttempts, randomCharacter }) {
+function RenderWinScreen({   
+  failedAttempts, randomCharacter }) {
   return (
     <div>
       <div id="winner" className="winner myriad-text ">
@@ -23,7 +25,10 @@ function RenderWinScreen({ renderFailedAttempts, randomCharacter }) {
         <h1>Congratulations!</h1>
         <ResultInformation randomCharacter={randomCharacter} />
       </div>
-      {renderFailedAttempts()}
+      <FailedAttempts
+        failedAttempts={failedAttempts}
+        randomCharacter={randomCharacter}
+      />
     </div>
   );
 }

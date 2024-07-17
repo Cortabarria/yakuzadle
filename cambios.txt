@@ -125,3 +125,38 @@ Se arreglo la imagen que aparecia en Result Information, haciendo que tenga el m
 
 Se agrego agarrar atributos que compartan el personaje seleccionado con el que hay que adivinar. Esto servira para hacer lo de la pista.
 Se agrego esta logica en help/createCharacter.js y sus diferentes funciones, esto es con el proposito de poner una pista para el usuario
+
+--------------------------------
+YAKUZADLE KIWAMI
+Se agrego el boton de ayuda "Staminan Royale" donde te devuelve un atributo que no hayas sacado.
+Esto se hace con contenido de la carpeta help.
+Se agrego que te quita una vida(score - 1 ) y te lo pone en un attempt.
+Se agrego un modal que te dice que sacaste todos los atributos y no se te puede ayudar. Agregado una frase del Like a Dragon Gaiden: The Man Who Erased his Name.  
+Se agrego el "myriad-text" asi tiene la misma fuente que los subtitulos del juego.
+
+en createCharacter.js se cambio el metodo que se agregan los valores que son tipo Array (ej, affiliation y hair) para que se puedan verificar correctamente.
+
+- 14/7-
+Se agrego la funcion de verificar si los componentes del array son el mismo pero en diferente orden "arraysEqual()" y se puso en el archivo util/utilFunction.js. 
+
+Se agrego "flex-wrap: wrap;" a .inputContainer para hacer que si la pantalla es demasiada chica, que el input "tome" la primera fila y la segunda fila sea "Guess!" y "Staminan".
+
+Se cambio en RenderGuessR el valor de isOptionEqualToValue a "isOptionEqualToValue={(option, value) => option.value === value.value}" , esto quita el error de
+MUI: The value provided to Autocomplete is invalid. https://stackoverflow.com/questions/72389212/mui-the-value-provided-to-autocomplete-is-invalid-none-of-the-options-match-wi
+
+Se le puso devuelta StrictMode en index para testear
+
+- 15/7 -
+Se dio por vencido ImageBringer y su funcionamiento de traer rgg.png si no existia. Ahora siempre trae foto y devuelve una foto de la inicial si no
+
+Se cambio los atributos que le entraban a Render Win y Lose screen en AppR con el fin de estar mas en linea con los cambios previamente hechos.
+Se agrego otro modal para indicar que hace el tocar el boton de Staminan Royale, dandote un boton para consumir (si no hay nuevos atributos, sale el modal anteriormente implementado) 
+y otro para cancelar.
+Si se consigue la ayuda, tira el audio "drink.mp3".
+
+- 16/7 - 
+Se cambio el formato de las imagenes a webp y el tamaño siendo 200px - 200px. La imagen de cuando se revela se cambio a 200px - 200px. Se agregaron mas imagenes.
+Agregar carpetas en charactersPortraits con subcarpetas de cada juego para poner ahi los personajes que lo tienen como first_game_appearance
+ME QUEDE EN IMAGENES EN YUKI - 34
+- 17/7 - 
+Se agregaron todas las imagenes para los personajes hasta el id 65

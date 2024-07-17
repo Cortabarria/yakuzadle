@@ -4,7 +4,7 @@ import ResultInformation from "./ResultInformation";
 import LoseFailedInformation from "./LoseFailedInformation";
 import FailedAttempts from "../guessCharacterRandom/FailedAttempts";
 
-function RenderLoseScreen({ renderFailedAttempts, randomCharacter }) {
+function RenderLoseScreen({ failedAttempts, randomCharacter }) {
   return (
     <div>
       <div class="result">
@@ -13,10 +13,13 @@ function RenderLoseScreen({ renderFailedAttempts, randomCharacter }) {
           <ResultInformation randomCharacter={randomCharacter} />
         </div>
 
-          <LoseFailedInformation randomCharacter={randomCharacter} />
-          
+        <LoseFailedInformation randomCharacter={randomCharacter} />
       </div>
-      {renderFailedAttempts()}
+
+      <FailedAttempts
+        failedAttempts={failedAttempts}
+        randomCharacter={randomCharacter}
+      />{" "}
     </div>
   );
 }

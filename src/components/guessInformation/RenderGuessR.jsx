@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, memo } from "react";
 import {
   Button,
   TextField,
@@ -11,15 +11,29 @@ import {
 import "../../styles/input.css";
 import heartShower from "./heartShower";
 import getBackgroundImage from "../guessInformation/ImageBringer";
+import { styled } from "@mui/material/styles";
+import FailedAttempts from "../guessCharacterRandom/FailedAttempts";
 
+const CircularButton = styled(Button)({
+  width: 50, 
+  height: 50, 
+  borderRadius: "50%",
+  padding: 0,
+  minWidth: 0,
+});
 
-function RenderGuess({
-  state,
+const RenderGuess = memo(({
+  selectedName,
+  isValidSelection,
+  staminanUsed,
+  score,
+  failedAttempts,
   handleInputChange,
   checkAnswer,
   peopleList,
-  renderFailedAttempts,
-}) {
+  handleStaminanClick,
+  randomCharacter,
+}) => {
   const [inputValue, setInputValue] = useState("");
   const [filteredOptions, setFilteredOptions] = useState([]);
   const inputRef = useRef(null);
@@ -34,7 +48,7 @@ function RenderGuess({
     if (inputRef.current) {
       inputRef.current.focus();
     }
-  }, [state.selectedName]);
+  }, [selectedName]);
 
   useEffect(() => {
     const filterOptions = (options, inputValue) => {
@@ -103,7 +117,6 @@ function RenderGuess({
         <Avatar
           alt={option.name}
           src={getBackgroundImage(option)}
-          // src={`images/charactersPortraits/${option.name}.png`}
           sx={{ height: "100px", width: "100px", marginRight: "30px" }}
           variant="square"
         />
@@ -118,12 +131,12 @@ function RenderGuess({
   );
 
   return (
-    <div className="change" >
+    <div className="change">
       <div className="squareInfo">
         <div className="inputContainer">
           <Autocomplete
             style={{ width: 500, background: "whitesmoke" }}
-            value={state.selectedName ? { name: state.selectedName } : null}
+            value={selectedName ? { name: selectedName } : null}
             onChange={handleAutocompleteChange}
             inputValue={inputValue}
             onInputChange={(event, newInputValue) => {
@@ -133,7 +146,10 @@ function RenderGuess({
             options={filteredOptions}
             getOptionLabel={(option) => option.name}
             renderOption={renderOption}
-            isOptionEqualToValue={(option, value) => option.name === value.name}
+            isOptionEqualToValue={(option, value) =>
+              option.value === value.value
+            }
+            // isOptionEqualToValue={(option, value) => option.name === value.name}
             renderInput={(params) => (
               <TextField
                 {...params}
@@ -148,16 +164,33 @@ function RenderGuess({
             variant="contained"
             color="primary"
             onClick={checkAnswer}
-            disabled={!state.isValidSelection}
+            disabled={!isValidSelection}
           >
             Guess!
           </Button>
+
+          <CircularButton
+            title="Use Staminan Royale"
+            variant="contained"
+            color="primary"
+            onClick={handleStaminanClick}
+            disabled={staminanUsed || score > -5}
+          >
+            <img
+              src="images/assets/staminan.webp"
+              alt="staminan"
+              style={{ width: "100%", height: "100%", borderRadius: "50%" }}
+            />
+          </CircularButton>
         </div>
-        <div className="heartContainer">{heartShower(state.score)}</div>
+        <div className="heartContainer">{heartShower(score)}</div>
       </div>
-      {renderFailedAttempts()}
+      <FailedAttempts
+        failedAttempts={failedAttempts}
+        randomCharacter={randomCharacter}
+      />
     </div>
   );
-}
+});
 
 export default RenderGuess;

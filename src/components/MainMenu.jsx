@@ -2,17 +2,25 @@ import React from "react";
 import { Link, Route, Routes, useLocation } from "react-router-dom";
 import AppR from "../components/guessCharacterRandom/AppR";
 import AppIR from "./guessIrezumiRandom/WIP-AppIR";
+
+// import MainComponent from "./tests/MainComponent";
+
 import "../styles/mainmenu.css";
 
 function MainMenu() {
   const location = useLocation();
 
-  if (location.pathname === "/random" || location.pathname === "/irezumi") {
+  if (
+    location.pathname === "/random" ||
+    location.pathname === "/irezumi" ||
+    location.pathname === "/test"
+  ) {
     // Only render the component for the route
     return (
       <Routes>
         <Route path="/random" element={<AppR />} />
-        <Route path="/irezumi" element={<AppIR />} />
+        {/* <Route path="/irezumi" element={<AppIR />} />
+        <Route path="/test" element={<MainComponent />} /> */}
       </Routes>
     );
   }
@@ -36,7 +44,7 @@ function MainMenu() {
             </Link>
           </div>
 
-          <div className="button-mode">
+          {/* <div className="button-mode">
             <img
               src="button.png"
               width="100%"
@@ -49,7 +57,22 @@ function MainMenu() {
                 <div className="button-description">Coming soon</div>
               </div>
             </Link>
-          </div>
+          </div> */}
+
+          {/* <div className="button-mode">
+            <img
+              src="button.png"
+              width="100%"
+              className="button-img"
+              alt="button"
+            />
+            <Link to="/test" className="link">
+              <div className="button-content">
+                <div className="button-title">TEST</div>
+                <div className="button-description">For testing</div>
+              </div>
+            </Link>
+          </div> */}
         </>
       </div>
     </div>
