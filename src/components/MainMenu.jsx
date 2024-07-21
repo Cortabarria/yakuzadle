@@ -31,7 +31,7 @@ function MainMenu() {
         <>
           <div className="button-mode">
             <img
-              src="button.png"
+              src="./button.png"
               width="100%"
               className="button-img"
               alt="button"
