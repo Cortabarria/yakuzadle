@@ -1,7 +1,7 @@
 
 function getBackgroundImage(person) {
   if(person.name == "Staminan Royale"){
-    const imageUrl = `images/charactersPortraits/Staminan Royale.webp`;
+    const imageUrl = `${process.env.PUBLIC_URL}/images/charactersPortraits/Staminan Royale.webp`;
     return imageUrl;
   }
   const imageUrl = `${process.env.PUBLIC_URL}/images/charactersPortraits/${person.first_game_appearance}/${person.name}.webp`;
