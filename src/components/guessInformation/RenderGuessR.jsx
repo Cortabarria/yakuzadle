@@ -177,7 +177,7 @@ const RenderGuess = memo(({
             disabled={staminanUsed || score > -5}
           >
             <img
-              src="images/assets/staminan.webp"
+              src={`${process.env.PUBLIC_URL}/images/assets/staminan.webp`}
               alt="staminan"
               style={{ width: "100%", height: "100%", borderRadius: "50%" }}
             />

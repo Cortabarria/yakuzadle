@@ -4,7 +4,7 @@ function getBackgroundImage(person) {
     const imageUrl = `images/charactersPortraits/Staminan Royale.webp`;
     return imageUrl;
   }
-  const imageUrl = `/images/charactersPortraits/${person.first_game_appearance}/${person.name}.webp`;
+  const imageUrl = `${process.env.PUBLIC_URL}/images/charactersPortraits/${person.first_game_appearance}/${person.name}.webp`;
   return imageUrl;
 
   //Muy compli hacer funcionar bien esto. Ahora siempre trae la imagen y si no, devuelve una letra de la inicial

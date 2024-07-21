@@ -24,7 +24,7 @@ function AppR() {
   // useRef to track whether the initialization has been done
   const hasInitialized = useRef(false);
 
-  let audioChupando = new Audio('./audio/drink.mp3');
+  let audioChupando = new Audio(`${process.env.PUBLIC_URL}/audio/drink.mp3`);
 
   useEffect(() => {
     // Check if the initialization has not been done yet
