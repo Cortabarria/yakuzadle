@@ -3,7 +3,8 @@ import TableHeaders from "./TableHeaders";
 import "../../styles/FailedAttempts.css";
 
 import getBackgroundImage from "../guessInformation/ImageBringer";
-import { arraysEqual } from "../../utils/utilFunction";
+import { arraysEqual, vhToPx } from "../../utils/utilFunction";
+import { Textfit } from "react-textfit";
 
 const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
   if (failedAttempts.length === 0) {
@@ -97,7 +98,7 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
           return (
             <div className="boxy container-outer" key={index}>
               <div className="failed-attempt groupGuessesAnswersRow">
-                <p
+                <div
                   className="imgsqr squareanswer image-container"
                   style={{
                     fontSize: "1.5vh",
@@ -107,20 +108,25 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
                   }}
                 >
                   <span className="hover-text">{person.name}</span>
-                </p>
+                </div>
 
-                <p
+                <div
                   className={`attribute ${
                     person.sex === randomCharacter.sex ? "correct" : "incorrect"
                   } squareanswer`}
                 >
                   {person.sex}
-                </p>
-                <p className={`attribute ${affiliationClass} squareanswer`}>
+                </div>
+                <Textfit
+                  className={`attribute ${affiliationClass} squareanswer`}
+                  mode="multi"
+                  min={5}
+                  max={10}
+                >
                   {person.affiliation.join(" / ")}
-                </p>
+                </Textfit>
 
-                {/* <p
+                {/* <div
                   className={`attribute ${
                     person.hair == randomCharacter.hair
                       ? "correct"
@@ -128,19 +134,19 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
                   } squareanswer`}
                 >
                   {person.hair.join(" / ")}
-                </p> */}
+                </div> */}
 
-                <p className={`attribute ${hairClass} squareanswer`}>
+                <div className={`attribute ${hairClass} squareanswer`}>
                   {person.hair.join(" / ")}
-                </p>
+                </div>
 
-                <p className={`attribute ${higClass} squareanswer`}>
+                <div className={`attribute ${higClass} squareanswer`}>
                   {person.height}
-                </p>
-                <p className={`attribute ${dobClass} squareanswer`}>
+                </div>
+                <div className={`attribute ${dobClass} squareanswer`}>
                   {person.dob}
-                </p>
-                <p
+                </div>
+                <div
                   className={`attribute ${
                     person.first_game_appearance ===
                     randomCharacter.first_game_appearance
@@ -149,9 +155,9 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
                   } squareanswer`}
                 >
                   {person.first_game_appearance}
-                </p>
+                </div>
 
-                <p
+                <div
                   className={`attribute ${
                     person.last_game_appearance ===
                     randomCharacter.last_game_appearance
@@ -161,9 +167,9 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
                   // style={{ wordBreak: "break-all" }}
                 >
                   {person.last_game_appearance}
-                </p>
+                </div>
 
-                <p
+                <div
                   className={`attribute ${
                     person.karaoke === randomCharacter.karaoke
                       ? "correct"
@@ -171,7 +177,7 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
                   } squareanswer`}
                 >
                   {person.karaoke}
-                </p>
+                </div>
               </div>
             </div>
           );

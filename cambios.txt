@@ -160,3 +160,8 @@ Agregar carpetas en charactersPortraits con subcarpetas de cada juego para poner
 ME QUEDE EN IMAGENES EN YUKI - 34
 - 17/7 - 
 Se agregaron todas las imagenes para los personajes hasta el id 65
+
+
+- 22/7 -
+Se le agrego la biblioteca textFit para hacer que Affiliation se divida correctamente y no haga overflow. A eso tambien se le cambio de <p> a <div> en FailedAttempts.
+Tambien una funcion que pasa vh a px, probablemente se borre en un futuro.
