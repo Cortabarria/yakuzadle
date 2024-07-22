@@ -7,18 +7,18 @@ import AppR from "./components/guessCharacterRandom/AppR";
 import Header from "./components/layout/Header";
 import MainMenu from "./components/MainMenu";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import Footer from "./components/layout/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div>
     <StrictMode>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <MainMenu />
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </StrictMode>
   </div>
 );

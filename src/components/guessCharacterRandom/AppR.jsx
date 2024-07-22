@@ -12,6 +12,7 @@ import { getStaminanRoyale } from "../help/createCharacter";
 
 import BasicModal from "../modal/modalStaminan";
 import WantToUseModal from "../modal/ModalUseStaminan";
+import getBackgroundImage from "../guessInformation/ImageBringer";
 
 import { arraysEqual } from "../../utils/utilFunction";
 
@@ -36,10 +37,20 @@ function AppR() {
       setRandomCharacter(character);
       console.log(character.name);
 
+      // Preload images
+      preloadImages(list);
+
       // Mark the initialization as done
       hasInitialized.current = true;
     }
   }, []);
+
+  const preloadImages = (list) => {
+    list.forEach((person) => {
+      const img = new Image();
+      img.src = getBackgroundImage(person);
+    });
+  };
 
   const [state, setState] = useState({
     inputText: "",
