@@ -165,3 +165,10 @@ Se agregaron todas las imagenes para los personajes hasta el id 65
 - 22/7 -
 Se le agrego la biblioteca textFit para hacer que Affiliation se divida correctamente y no haga overflow. A eso tambien se le cambio de <p> a <div> en FailedAttempts.
 Tambien una funcion que pasa vh a px, probablemente se borre en un futuro.
+
+--------------------
+- 29/7 -
+Se agrega a .winner los valores para hacer que no sea todo el width del div, que tenga un border (el azul siendo el azul de SEGA) y se mejore todo.
+.winner
+display: inline-block;
+Se adjusto para que este centrado tanto en win como lose screen. 

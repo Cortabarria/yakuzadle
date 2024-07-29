@@ -9,7 +9,9 @@ function RenderLoseScreen({ failedAttempts, randomCharacter }) {
     <div>
       <div class="result">
         <div id="winner" class="winner myriad-text removeLater">
-          Womp Womp!
+          <h1>
+            Womp Womp!
+          </h1>
           <ResultInformation randomCharacter={randomCharacter} />
         </div>
 

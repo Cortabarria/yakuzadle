@@ -19,7 +19,7 @@ function ConfettiWin() {
 function RenderWinScreen({   
   failedAttempts, randomCharacter }) {
   return (
-    <div>
+    <div class="result">
       <div id="winner" className="winner myriad-text removeLater">
         {ConfettiWin()}
         <h1>Congratulations!</h1>

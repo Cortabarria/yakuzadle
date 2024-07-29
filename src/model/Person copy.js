@@ -5,9 +5,10 @@ class Person {
     name,
     sex,
     affiliation,
-    occupation,
-    involvement,
     hair,
+    eye,
+    height,
+    dob,
     first_game_appearance,
     last_game_appearance,
     karaoke,
@@ -16,17 +17,25 @@ class Person {
     this.name = name;
     this.sex = sex;
     this.affiliation = Array.isArray(affiliation) ? affiliation : [affiliation];
-
-    this.occupation = Array.isArray(occupation) ? occupation : [occupation];
-
     this.hair = Array.isArray(hair) ? hair : [hair];
-
-    this.involvement = Array.isArray(involvement) ? involvement : [involvement];
-
-
+    this.eye = eye;
+    this.height = height;
+    this.dob = dob;
     this.first_game_appearance = first_game_appearance;
     this.last_game_appearance = last_game_appearance;
     this.karaoke = karaoke;
+  }
+
+  greet() {
+    return `Hello, my name is ${this.name}, I am ${
+      this.sex
+    }, I have ${this.hair.join(", ")} hair, my eyes are ${this.eye}, I am ${
+      this.height
+    } tall, I was born on ${this.dob}, my first game appearance was in ${
+      this.first_game_appearance
+    }, my last game appearance was in ${
+      this.last_game_appearance
+    } and my favorite karaoke song is ${this.karaoke}.`;
   }
 }
 

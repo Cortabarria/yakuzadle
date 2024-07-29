@@ -18,8 +18,49 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
         .slice()
         .reverse()
         .map((person, index) => {
+
+
+
           let dobClass = "";
           let higClass = "";
+
+          // Year
+          if (person.dob.length === 0) {
+            dobClass = "incorrect";
+          } else {
+            if (randomCharacter.dob === person.dob) {
+              dobClass = "same-dob-green";
+            } else {
+              if (randomCharacter.dob !== "?" && person.dob !== "?") {
+                if (person.dob > randomCharacter.dob) {
+                  dobClass = "higher-dob";
+                } else if (person.dob < randomCharacter.dob) {
+                  dobClass = "lower-dob";
+                }
+              } else {
+                dobClass = "incorrect";
+              }
+            }
+          }
+
+          // Height
+          if (person.height.length === 0) {
+            higClass = "incorrect";
+          } else {
+            if (person.height === randomCharacter.height) {
+              higClass = "same-dob-green";
+            } else {
+              if (randomCharacter.height !== "?" && person.height !== "?") {
+                if (person.height > randomCharacter.height) {
+                  higClass = "higher-dob";
+                } else if (person.height < randomCharacter.height) {
+                  higClass = "lower-dob";
+                }
+              } else {
+                higClass = "incorrect";
+              }
+            }
+          }
 
           // Check if affiliations match
           const fullMatch = arraysEqual(
@@ -54,42 +95,6 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
             hairClass = "incorrect";
           }
 
-          // Check if occupation match
-          const fullMatchOcc = arraysEqual(
-            person.occupation,
-            randomCharacter.occupation
-          );
-          const partialMatchOcc = person.occupation.some((occ) =>
-            randomCharacter.occupation.includes(occ)
-          );
-
-          let occupationClass = "";
-          if (fullMatchOcc) {
-            occupationClass = "correct";
-          } else if (partialMatchOcc) {
-            occupationClass = "partial-match";
-          } else {
-            occupationClass = "incorrect";
-          }
-
-          // Check if Involvement match
-          const fullMatchInv = arraysEqual(
-            person.involvement,
-            randomCharacter.involvement
-          );
-          const partialMatchInv = person.involvement.some((inv) =>
-            randomCharacter.involvement.includes(inv)
-          );
-
-          let involvementClass = "";
-          if (fullMatchInv) {
-            involvementClass = "correct";
-          } else if (partialMatchInv) {
-            involvementClass = "partial-match";
-          } else {
-            involvementClass = "incorrect";
-          }
-
           return (
             <div className="boxy container-outer" key={index}>
               <div className="failed-attempt groupGuessesAnswersRow">
@@ -112,7 +117,6 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
                 >
                   {person.sex}
                 </div>
-
                 <Textfit
                   className={`attribute ${affiliationClass} squareanswer`}
                   mode="multi"
@@ -122,28 +126,26 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
                   {person.affiliation.join(" / ")}
                 </Textfit>
 
-                <Textfit
-                  className={`attribute ${occupationClass} squareanswer`}
-                  mode="multi"
-                  min={5}
-                  max={10}
+                {/* <div
+                  className={`attribute ${
+                    person.hair == randomCharacter.hair
+                      ? "correct"
+                      : "incorrect"
+                  } squareanswer`}
                 >
-                  {person.occupation.join(" / ")}
-                </Textfit>
-
-                <Textfit
-                  className={`attribute ${involvementClass} squareanswer`}
-                  mode="multi"
-                  min={5}
-                  max={10}
-                >
-                  {person.involvement.join(" / ")}
-                </Textfit>
+                  {person.hair.join(" / ")}
+                </div> */}
 
                 <div className={`attribute ${hairClass} squareanswer`}>
                   {person.hair.join(" / ")}
                 </div>
 
+                <div className={`attribute ${higClass} squareanswer`}>
+                  {person.height}
+                </div>
+                <div className={`attribute ${dobClass} squareanswer`}>
+                  {person.dob}
+                </div>
                 <div
                   className={`attribute ${
                     person.first_game_appearance ===
@@ -152,7 +154,7 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
                       : "incorrect"
                   } squareanswer`}
                 >
-                  {person.first_game_appearance}
+                  {person.first_game_appearance} (2022)
                 </div>
 
                 <div
@@ -164,7 +166,7 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
                   } squareanswer`}
                   // style={{ wordBreak: "break-all" }}
                 >
-                  {person.last_game_appearance}
+                  {person.last_game_appearance} (2022)
                 </div>
 
                 <div

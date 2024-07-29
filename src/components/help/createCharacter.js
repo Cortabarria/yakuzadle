@@ -7,18 +7,9 @@ function createCharacterFromAttributes(sharedAttributes) {
     name: "Staminan Royale",
     sex: sharedAttributes.sex || "",
     affiliation: sharedAttributes.affiliation,
-    // affiliation: Array.isArray(sharedAttributes.affiliation)
-    //   ? sharedAttributes.affiliation
-    //   : [],
-    // hair: Array.isArray(sharedAttributes.hair)
-    //   ? sharedAttributes.hair
-    //   : sharedAttributes.hair
-    //   ? [sharedAttributes.hair]
-    //   : [],
     hair: sharedAttributes.hair,
-    eye: sharedAttributes.eye || "",
-    height: sharedAttributes.height || "",
-    dob: sharedAttributes.dob || "",
+    occupation: sharedAttributes.occupation,
+    involvement: sharedAttributes.involvement,
     first_game_appearance: sharedAttributes.first_game_appearance || "",
     last_game_appearance: sharedAttributes.last_game_appearance || "",
     karaoke: sharedAttributes.karaoke || "",
@@ -33,7 +24,7 @@ function difference(character, random) {
 
   for (const prop in random) {
     if (random.hasOwnProperty(prop)) {
-        if (prop === 'id' || prop === 'name' || prop === 'eye') {
+        if (prop === 'id' || prop === 'name') {
             continue;
         }
 
@@ -73,9 +64,8 @@ function createPersonWithRandomAttribute(randomDifferingAttribute) {
     sex: "",
     affiliation: [],
     hair: [],
-    eye: "",
-    height: "",
-    dob: "",
+    occupation: [],
+    involvement: [],
     first_game_appearance: "",
     last_game_appearance: "",
     karaoke: "",
@@ -93,14 +83,11 @@ function createPersonWithRandomAttribute(randomDifferingAttribute) {
     case "hair":
       person.hair = randomDifferingAttribute.value;
       break;
-    case "eye":
-      person.eye = randomDifferingAttribute.value;
+    case "occupation":
+      person.occupation = randomDifferingAttribute.value;
       break;
-    case "height":
-      person.height = randomDifferingAttribute.value;
-      break;
-    case "dob":
-      person.dob = randomDifferingAttribute.value;
+    case "involvement":
+      person.involvement = randomDifferingAttribute.value;
       break;
     case "first_game_appearance":
       person.first_game_appearance = randomDifferingAttribute.value;
