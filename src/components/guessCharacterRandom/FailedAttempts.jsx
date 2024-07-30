@@ -113,11 +113,15 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
                   {person.sex}
                 </div>
 
+                <div className={`attribute ${hairClass} squareanswer`}>
+                  {person.hair.join(" / ")}
+                </div>
+
                 <Textfit
                   className={`attribute ${affiliationClass} squareanswer`}
                   mode="multi"
-                  min={5}
-                  max={10}
+                  min={10}
+                  max={12}
                 >
                   {person.affiliation.join(" / ")}
                 </Textfit>
@@ -125,24 +129,11 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
                 <Textfit
                   className={`attribute ${occupationClass} squareanswer`}
                   mode="multi"
-                  min={5}
-                  max={10}
+                  min={10}
+                  max={14}
                 >
                   {person.occupation.join(" / ")}
                 </Textfit>
-
-                <Textfit
-                  className={`attribute ${involvementClass} squareanswer`}
-                  mode="multi"
-                  min={5}
-                  max={10}
-                >
-                  {person.involvement.join(" / ")}
-                </Textfit>
-
-                <div className={`attribute ${hairClass} squareanswer`}>
-                  {person.hair.join(" / ")}
-                </div>
 
                 <div
                   className={`attribute ${
@@ -167,6 +158,15 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
                   {person.last_game_appearance}
                 </div>
 
+                <Textfit
+                  className={`attribute ${involvementClass} squareanswer`}
+                  mode="multi"
+                  min={5}
+                  max={14}
+                >
+                  {person.involvement.join(" / ")}
+                </Textfit>
+                
                 <div
                   className={`attribute ${
                     person.karaoke === randomCharacter.karaoke

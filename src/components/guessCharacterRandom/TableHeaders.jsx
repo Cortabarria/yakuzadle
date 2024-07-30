@@ -12,12 +12,12 @@ function TableHeaders() {
           Name
         </p>
         <p className="squareheader">Sex</p>
-        <p className="squareheader">Affiliation</p>
         <p className="squareheader">Hair color</p>
-        <p className="squareheader">Height</p>
-        <p className="squareheader">Year of birth</p>
+        <p className="squareheader">Affiliation</p>
+        <p className="squareheader">Occupation</p>
         <p className="squareheader">First game appearance</p>
         <p className="squareheader">Last game appearance</p>
+        <p className="squareheader">Involvement</p>
         <p className="squareheader">
           Karaoke&nbsp;
           <a

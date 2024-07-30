@@ -172,3 +172,5 @@ Se agrega a .winner los valores para hacer que no sea todo el width del div, que
 .winner
 display: inline-block;
 Se adjusto para que este centrado tanto en win como lose screen. 
+
+Se acomodo los table headers y los square a un orden mejor estructurado. Ademas los fondos de los square se hicieron mas transparentes.

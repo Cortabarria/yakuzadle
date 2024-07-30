@@ -4,48 +4,73 @@ import "../guessCharacterRandom/TableHeaders";
 import TableHeaders from "../guessCharacterRandom/TableHeaders";
 import getBackgroundImage from "../guessInformation/ImageBringer.jsx";
 
+import { Textfit } from "react-textfit";
+
+
 function LoseFailedInformation({ randomCharacter }) {
   return (
     <div className={`failed-attempts reveal`} id="failedAttempts">
       <TableHeaders />
       <div className="boxy container-outer">
         <div className="failed-attempt groupGuessesAnswersRow">
-          <p
+          <div
             className="imgsqr squareanswer image-container"
             style={{
               fontSize: "1.5vh",
-              
               backgroundImage: `url("${getBackgroundImage(randomCharacter)}")`,
 
-              // backgroundImage: `url('images/charactersPortraits/${randomCharacter.name}.png')`,
+              // backgroundImage: `url('images/charactersPortraits/rgg.png')`,
             }}
           >
             <span className="hover-text">{randomCharacter.name}</span>
-          </p>
+          </div>
 
-          <p className="failed squareanswer">{randomCharacter.sex}</p>
+          <div className={`attribute failed squareanswer`}>
+            {randomCharacter.sex}
+          </div>
 
-          <p className="failed squareanswer">
-            {randomCharacter.affiliation.join(" / ")}
-          </p>
-
-          <p className="failed squareanswer">
+          <div className={`attribute failed squareanswer`}>
             {randomCharacter.hair.join(" / ")}
-          </p>
+          </div>
 
-          <p className="failed squareanswer">{randomCharacter.height}</p>
+          <Textfit
+            className={`attribute failed squareanswer`}
+            mode="multi"
+            min={10}
+            max={12}
+          >
+            {randomCharacter.affiliation.join(" / ")}
+          </Textfit>
 
-          <p className="failed squareanswer">{randomCharacter.dob}</p>
+          <Textfit
+            className={`attribute failed squareanswer`}
+            mode="multi"
+            min={10}
+            max={14}
+          >
+            {randomCharacter.occupation.join(" / ")}
+          </Textfit>
 
-          <p className="failed squareanswer">
+          <div className={`attribute failed squareanswer`}>
             {randomCharacter.first_game_appearance}
-          </p>
+          </div>
 
-          <p className="failed squareanswer">
+          <div className={`attribute failed squareanswer`}>
             {randomCharacter.last_game_appearance}
-          </p>
+          </div>
 
-          <p className="failed squareanswer">{randomCharacter.karaoke}</p>
+          <Textfit
+            className={`attribute failed squareanswer`}
+            mode="multi"
+            min={5}
+            max={14}
+          >
+            {randomCharacter.involvement.join(" / ")}
+          </Textfit>
+
+          <div className={`attribute failed squareanswer`}>
+            {randomCharacter.karaoke}
+          </div>
         </div>
       </div>
     </div>
