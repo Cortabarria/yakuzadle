@@ -16,7 +16,7 @@ import { arraysEqual } from "../../utils/utilFunction";
 
 import ConclusionComponent from "../conclusion/ConclusionComponent";
 
-function AppR() {
+function AppR({charac}) {
   const [peopleList, setPeopleList] = useState([]);
   const [randomCharacter, setRandomCharacter] = useState(null);
   const [isModalNoClueToGiveOpen, setIsModalNoClueToGiveOpen] = useState(false); // State to control the modal visibility
@@ -33,8 +33,12 @@ function AppR() {
       const list = ReturnCharactersJSON();
       setPeopleList(list);
       const character = getRandomCharacter(list);
-      setRandomCharacter(character);
-      console.log(character.name);
+      if(charac === undefined){
+        setRandomCharacter(character);
+        console.log(character.name);
+      }else{
+        setRandomCharacter(charac);
+      }
 
       // Preload images
       preloadImages(list);

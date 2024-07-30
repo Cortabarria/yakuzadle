@@ -7,18 +7,26 @@ import AppIR from "./guessIrezumiRandom/WIP-AppIR";
 
 import "../styles/mainmenu.css";
 
+import { getTodayCharacter } from "../utils/utilFunction";
+import { ReturnCharactersJSON } from "../utils/returnCharactersJSON";
+
+
 function MainMenu() {
   const location = useLocation();
+  const list = ReturnCharactersJSON();
+  const char = getTodayCharacter(list);
 
   if (
     location.pathname === "/random" ||
-    location.pathname === "/irezumi" ||
+    location.pathname === "/daily" ||
     location.pathname === "/test"
   ) {
     // Only render the component for the route
     return (
       <Routes>
         <Route path="/random" element={<AppR />} />
+        <Route path="/daily" element={<AppR charac={char} />} />
+
         {/* <Route path="/irezumi" element={<AppIR />} />
         <Route path="/test" element={<MainComponent />} /> */}
       </Routes>
@@ -36,6 +44,22 @@ function MainMenu() {
               className="button-img"
               alt="button"
             />
+            <Link to="/daily" className="link">
+              <div className="button-content">
+                <div className="button-title">Daily Character</div>
+                <div className="button-description">Guess the daily character!</div>
+              </div>
+            </Link>
+          </div>
+
+
+          <div className="button-mode">
+            <img
+              src={`${process.env.PUBLIC_URL}/button.png`}
+              width="100%"
+              className="button-img"
+              alt="button"
+            />
             <Link to="/random" className="link">
               <div className="button-content">
                 <div className="button-title">Random Character</div>
@@ -43,6 +67,7 @@ function MainMenu() {
               </div>
             </Link>
           </div>
+
 
           {/* <div className="button-mode">
             <img

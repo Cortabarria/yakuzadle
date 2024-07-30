@@ -1,0 +1,1114 @@
+[
+  {
+    "date": "30/07/2024",
+    "character": {
+      "id": 12,
+      "name": "Jun Oda",
+      "sex": "Male",
+      "affiliation": ["Tachibana Real Estate", "Shibusawa Family"],
+      "hair": ["Brown"],
+      "occupation": ["Real estate agent"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "31/07/2024",
+    "character": {
+      "id": 11,
+      "name": "Lao Gui",
+      "sex": "Male",
+      "affiliation": ["Dojima Family"],
+      "hair": ["Black"],
+      "occupation": ["Assassin"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "01/08/2024",
+    "character": {
+      "id": 18,
+      "name": "Tetsu Tachibana",
+      "sex": "Male",
+      "affiliation": ["Tachibana Real Estate"],
+      "hair": ["Black"],
+      "occupation": ["Real estate agent"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "02/08/2024",
+    "character": {
+      "id": 31,
+      "name": "Sotaro Komaki",
+      "sex": "Male",
+      "affiliation": ["Komaki School of Martial Arts", "Mentor"],
+      "hair": ["Black", "Gray"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Like a Dragon: Infinite Wealth",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "03/08/2024",
+    "character": {
+      "id": 5,
+      "name": "Joongi Han (Y6)",
+      "sex": "Male",
+      "affiliation": ["Jingweon Mafia", "Stardust"],
+      "hair": ["Silver Ash"],
+      "occupation": ["Criminal"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 6",
+      "last_game_appearance": "Yakuza 6",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "04/08/2024",
+    "character": {
+      "id": 48,
+      "name": "Mizumura",
+      "sex": "Male",
+      "affiliation": ["Club Mercury", "Five Stars"],
+      "hair": ["Gray"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "05/08/2024",
+    "character": {
+      "id": 37,
+      "name": "Mana Sakura",
+      "sex": "Female",
+      "affiliation": ["Club Sunshine", "Club Moon"],
+      "hair": ["Brown"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "06/08/2024",
+    "character": {
+      "id": 6,
+      "name": "Sohei Dojima",
+      "sex": "Male",
+      "affiliation": ["Tojo Clan", "Dojima Family"],
+      "hair": ["Black"],
+      "occupation": ["Yakuza"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Kiwami 2",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "07/08/2024",
+    "character": {
+      "id": 24,
+      "name": "Shintaro Kazama",
+      "sex": "Male",
+      "affiliation": ["Tojo Clan", "Dojima Family", "Kazama Family"],
+      "hair": ["Black", "Gray"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Kiwami 2",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "08/08/2024",
+    "character": {
+      "id": 10,
+      "name": "Tsukasa Sagawa",
+      "sex": "Male",
+      "affiliation": ["Omi Alliance", "Sagawa Family"],
+      "hair": ["Gray"],
+      "occupation": ["Yakuza"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "09/08/2024",
+    "character": {
+      "id": 49,
+      "name": "Kizuka",
+      "sex": "Male",
+      "affiliation": ["Club Jupiter", "Five Stars"],
+      "hair": ["Brown"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "10/08/2024",
+    "character": {
+      "id": 67,
+      "name": "Emoto",
+      "sex": "Male",
+      "affiliation": ["Doctor"],
+      "hair": ["Black", "Gray"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Like a Dragon: Infinite Wealth",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "11/08/2024",
+    "character": {
+      "id": 32,
+      "name": "Areshi",
+      "sex": "Male",
+      "affiliation": ["Street performer", "Mentor"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "12/08/2024",
+    "character": {
+      "id": 59,
+      "name": "Stephen Spining",
+      "sex": "Male",
+      "affiliation": ["Real Estate Royale", "Director"],
+      "hair": ["Blonde"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "13/08/2024",
+    "character": {
+      "id": 25,
+      "name": "Takashi Nihara",
+      "sex": "Male",
+      "affiliation": ["Tojo Clan"],
+      "hair": ["White"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "14/08/2024",
+    "character": {
+      "id": 23,
+      "name": "Homare Nishitani",
+      "sex": "Male",
+      "affiliation": ["Omi Alliance", "Kijin Clan"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "15/08/2024",
+    "character": {
+      "id": 3,
+      "name": "Daigo Dojima",
+      "sex": "Male",
+      "affiliation": ["Tojo Clan", "Dojima Family", "Kazama Family"],
+      "hair": ["Black"],
+      "occupation": ["Yakuza"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 2",
+      "last_game_appearance": "Like a Dragon: Infinite Wealth",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "16/08/2024",
+    "character": {
+      "id": 69,
+      "name": "Emiri",
+      "sex": "Female",
+      "affiliation": ["Mach Bowl"],
+      "hair": ["Blonde"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "17/08/2024",
+    "character": {
+      "id": 15,
+      "name": "Jo Amon",
+      "sex": "Male",
+      "affiliation": ["Amon Clan"],
+      "hair": ["Black"],
+      "occupation": ["Assassin"],
+      "involvement": ["Substory"],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Kiwami 2",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "18/08/2024",
+    "character": {
+      "id": 50,
+      "name": "Hino",
+      "sex": "Male",
+      "affiliation": ["Club Mars", "Five Stars"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "19/08/2024",
+    "character": {
+      "id": 61,
+      "name": "Dolce Kamiya",
+      "sex": "Male",
+      "affiliation": ["Princess League", "Presenter"],
+      "hair": ["Black", "Brown"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 5",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "20/08/2024",
+    "character": {
+      "id": 17,
+      "name": "Makoto Makimura",
+      "sex": "Female",
+      "affiliation": ["Hogushi Kaikan Massage"],
+      "hair": ["Brown"],
+      "occupation": ["Massage therapist"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Kiwami 2",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "21/08/2024",
+    "character": {
+      "id": 45,
+      "name": "Leisure King",
+      "sex": "Male",
+      "affiliation": ["Five Billionaires", "Real Estate Royale"],
+      "hair": ["Brown"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "22/08/2024",
+    "character": {
+      "id": 65,
+      "name": "Ryuji Goda",
+      "sex": "Male",
+      "affiliation": ["Omi Alliance", "Go-Ryu Clan"],
+      "hair": ["Black", "Blonde"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 2",
+      "last_game_appearance": "Kiwami 2",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "23/08/2024",
+    "character": {
+      "id": 44,
+      "name": "Electronics King",
+      "sex": "Male",
+      "affiliation": ["Five Billionaires", "Real Estate Royale"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "24/08/2024",
+    "character": {
+      "id": 22,
+      "name": "Reina",
+      "sex": "Female",
+      "affiliation": ["Serena"],
+      "hair": ["Brown"],
+      "occupation": ["Bartender"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Kiwami 1",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "25/08/2024",
+    "character": {
+      "id": 8,
+      "name": "Daisaku Kuze",
+      "sex": "Male",
+      "affiliation": ["Tojo Clan", "Kenno Clan"],
+      "hair": ["Black"],
+      "occupation": ["Yakuza"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "26/08/2024",
+    "character": {
+      "id": 70,
+      "name": "Long Hua",
+      "sex": "Female",
+      "affiliation": ["The Dragon & Tiger", "Weapons Dealer"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "27/08/2024",
+    "character": {
+      "id": 21,
+      "name": "Masaru Sera",
+      "sex": "Male",
+      "affiliation": ["Tojo Clan", "Nikkyo Consortium"],
+      "hair": ["Black", "Gray"],
+      "occupation": ["Yakuza"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Kiwami 1",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "28/08/2024",
+    "character": {
+      "id": 38,
+      "name": "Saki Hatsumi",
+      "sex": "Female",
+      "affiliation": ["Club Sunshine", "Club Jupiter"],
+      "hair": ["Brown"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "29/08/2024",
+    "character": {
+      "id": 40,
+      "name": "Finance King",
+      "sex": "Male",
+      "affiliation": ["Five Billionaires"],
+      "hair": ["Black", "Gray"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "30/08/2024",
+    "character": {
+      "id": 54,
+      "name": "Bob Utsunomiya",
+      "sex": "Male",
+      "affiliation": ["Naomi's Palace"],
+      "hair": ["Green"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 2",
+      "last_game_appearance": "Kiwami 2",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "31/08/2024",
+    "character": {
+      "id": 64,
+      "name": "Nugget",
+      "sex": "Female",
+      "affiliation": ["Real Estate Royale", "Mach Bowl"],
+      "hair": ["Red"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "01/09/2024",
+    "character": {
+      "id": 28,
+      "name": "Bacchus",
+      "sex": "Male",
+      "affiliation": ["Boxing trainer", "Mentor"],
+      "hair": ["Blonde"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "02/09/2024",
+    "character": {
+      "id": 2,
+      "name": "Haruka Sawamura",
+      "sex": "Female",
+      "affiliation": ["Morning Glory", "Dyna Chair"],
+      "hair": ["Black"],
+      "occupation": ["Idol"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Like a Dragon: Infinite Wealth",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "03/09/2024",
+    "character": {
+      "id": 46,
+      "name": "Tsukiyama",
+      "sex": "Male",
+      "affiliation": ["Club Moon", "Five Stars"],
+      "hair": ["Brown"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "04/09/2024",
+    "character": {
+      "id": 34,
+      "name": "Yuki",
+      "sex": "Female",
+      "affiliation": ["Club Sunshine", "Club Four Shine"],
+      "hair": ["Brown"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Like a Dragon: Infinite Wealth",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "05/09/2024",
+    "character": {
+      "id": 16,
+      "name": "Akira Nishikiyama",
+      "sex": "Male",
+      "affiliation": [
+        "Tojo Clan",
+        "Nishikiyama Family",
+        "Dojima Family",
+        "Kazama Family"
+      ],
+      "hair": ["Black"],
+      "occupation": ["Yakuza"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Kiwami 1",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "06/09/2024",
+    "character": {
+      "id": 29,
+      "name": "Kamoji",
+      "sex": "Male",
+      "affiliation": ["Punchout artist", "Mentor"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "07/09/2024",
+    "character": {
+      "id": 26,
+      "name": "Billiken",
+      "sex": "Male",
+      "affiliation": ["Osaka Prefectural Police", "Kijin Clan"],
+      "hair": ["Gray"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "08/09/2024",
+    "character": {
+      "id": 56,
+      "name": "Marina Shiraishi",
+      "sex": "Female",
+      "affiliation": [
+        "Real Estate Royale",
+        "Tokyo Metropolitan Police Department"
+      ],
+      "hair": ["Brown"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "09/09/2024",
+    "character": {
+      "id": 9,
+      "name": "Hiroki Awano",
+      "sex": "Male",
+      "affiliation": ["Tojo Clan", "Taihei Association"],
+      "hair": ["Black"],
+      "occupation": ["Yakuza"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "10/09/2024",
+    "character": {
+      "id": 42,
+      "name": "Gambling King",
+      "sex": "Male",
+      "affiliation": ["Five Billionaires", "Real Estate Royale"],
+      "hair": ["Brown", "Blonde"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "11/09/2024",
+    "character": {
+      "id": 58,
+      "name": "Miracle Johnson",
+      "sex": "Male",
+      "affiliation": ["Real Estate Royale", "Music Industry"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "12/09/2024",
+    "character": {
+      "id": 55,
+      "name": "Yamanoi",
+      "sex": "Male",
+      "affiliation": ["Real Estate Royale"],
+      "hair": ["Gray"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "13/09/2024",
+    "character": {
+      "id": 53,
+      "name": "Taichi Kurihara",
+      "sex": "Male",
+      "affiliation": ["Toko Credit", "Civilian"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "14/09/2024",
+    "character": {
+      "id": 27,
+      "name": "Tateyama",
+      "sex": "Male",
+      "affiliation": ["Doctor"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Kiwami 2",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "15/09/2024",
+    "character": {
+      "id": 4,
+      "name": "Goro Majima",
+      "sex": "Male",
+      "affiliation": [
+        "Tojo Clan",
+        "Shimano Family",
+        "Majima Family",
+        "Majima Construction"
+      ],
+      "hair": ["Black"],
+      "occupation": ["Yakuza"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Like a Dragon: Infinite Wealth",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "16/09/2024",
+    "character": {
+      "id": 1,
+      "name": "Kazuma Kiryu",
+      "sex": "Male",
+      "affiliation": [
+        "Tojo Clan",
+        "Morning Glory",
+        "Dojima Family",
+        "Nagasu Taxi",
+        "Daidoji Faction"
+      ],
+      "hair": ["Black", "Gray"],
+      "occupation": ["Yakuza", "Taxi Driver", "Daidoji Agent"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Like a Dragon: Infinite Wealth",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "17/09/2024",
+    "character": {
+      "id": 20,
+      "name": "Wen Hai Lee",
+      "sex": "Male",
+      "affiliation": ["Hogushi Kaikan Massage"],
+      "hair": ["Brown"],
+      "occupation": ["Assassin", "Massage therapist"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "18/09/2024",
+    "character": {
+      "id": 19,
+      "name": "Osamu Kashiwagi",
+      "sex": "Male",
+      "affiliation": [
+        "Tojo Clan",
+        "Kazama Family",
+        "Honest Living Association",
+        "Survive Bar"
+      ],
+      "hair": ["Black", "Gray"],
+      "occupation": ["Yakuza", "Bartender"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Like a Dragon: Infinite Wealth",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "19/09/2024",
+    "character": {
+      "id": 66,
+      "name": "Etsuko",
+      "sex": "Female",
+      "affiliation": ["Go-Ryu Clan"],
+      "hair": ["Purple"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Like a Dragon: Infinite Wealth",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "20/09/2024",
+    "character": {
+      "id": 7,
+      "name": "Keiji Shibusawa",
+      "sex": "Male",
+      "affiliation": ["Tojo Clan", "Shibusawa Family"],
+      "hair": ["Black"],
+      "occupation": ["Yakuza"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "21/09/2024",
+    "character": {
+      "id": 63,
+      "name": "Marusa Marui",
+      "sex": "Female",
+      "affiliation": [
+        "Real Estate Royale",
+        "Japanese National Taxation Agency's Criminal Investigation Bureau"
+      ],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "22/09/2024",
+    "character": {
+      "id": 33,
+      "name": "Fei Hu",
+      "sex": "Male",
+      "affiliation": ["The Dragon & Tiger", "Mentor", "Weapons Dealer"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "23/09/2024",
+    "character": {
+      "id": 41,
+      "name": "Media King",
+      "sex": "Male",
+      "affiliation": ["Five Billionaires", "Real Estate Royale"],
+      "hair": ["Red"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "24/09/2024",
+    "character": {
+      "id": 51,
+      "name": "Youda",
+      "sex": "Male",
+      "affiliation": ["Club Sunshine", "Club Four Shine"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Kiwami 2",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "25/09/2024",
+    "character": {
+      "id": 36,
+      "name": "Chika Arimura",
+      "sex": "Female",
+      "affiliation": ["Club Sunshine", "Club Venus"],
+      "hair": ["Brown"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "26/09/2024",
+    "character": {
+      "id": 72,
+      "name": "Test",
+      "sex": "Female",
+      "affiliation": ["Tojo Clan"],
+      "hair": ["Dyed Blonde", "Purple"],
+      "occupation": ["Civilian", "Daidoji Agent"],
+      "involvement": ["Main Story", "Substory"],
+      "first_game_appearance": "Kiwami 1",
+      "last_game_appearance": "Judgment",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "27/09/2024",
+    "character": {
+      "id": 52,
+      "name": "Toko Credit President",
+      "sex": "Male",
+      "affiliation": ["Toko Credit", "Moneylender"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "28/09/2024",
+    "character": {
+      "id": 13,
+      "name": "Futoshi Shimano",
+      "sex": "Male",
+      "affiliation": ["Tojo Clan", "Dojima Family", "Shimano Family"],
+      "hair": ["Bald"],
+      "occupation": ["Yakuza"],
+      "involvement": ["Main Story"],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Kiwami 2",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "29/09/2024",
+    "character": {
+      "id": 30,
+      "name": "Miss Tatsu",
+      "sex": "Female",
+      "affiliation": ["Debt collector", "Mentor"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "30/09/2024",
+    "character": {
+      "id": 35,
+      "name": "Ai Uehara",
+      "sex": "Female",
+      "affiliation": ["Club Sunshine", "Club Mars"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "01/10/2024",
+    "character": {
+      "id": 71,
+      "name": "Krazy Kyo",
+      "sex": "Male",
+      "affiliation": ["Real Estate Royale", "Yokimichi Silvers"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "02/10/2024",
+    "character": {
+      "id": 68,
+      "name": "Kanehara",
+      "sex": "Male",
+      "affiliation": ["Club Venus", "Five Stars"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "03/10/2024",
+    "character": {
+      "id": 57,
+      "name": "Shinji Tanaka",
+      "sex": "Male",
+      "affiliation": [
+        "Tojo Clan",
+        "Nishikiyama Family",
+        "Dojima Family",
+        "Kazama Family"
+      ],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 1",
+      "last_game_appearance": "Kiwami 1",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "04/10/2024",
+    "character": {
+      "id": 60,
+      "name": "Fujisawa (Pocket Circuit Fighter)",
+      "sex": "Male",
+      "affiliation": ["Fujisawa Tofu", "Pocket Circuit Stadium"],
+      "hair": ["Black", "Gray"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Like a Dragon: Infinite Wealth",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "05/10/2024",
+    "character": {
+      "id": 62,
+      "name": "Kan Ogita",
+      "sex": "Male",
+      "affiliation": ["Dyna Chair"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 5",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "06/10/2024",
+    "character": {
+      "id": 43,
+      "name": "Pleasure King",
+      "sex": "Male",
+      "affiliation": ["Five Billionaires", "Real Estate Royale"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "07/10/2024",
+    "character": {
+      "id": 39,
+      "name": "Hibiki Otsuki",
+      "sex": "Female",
+      "affiliation": ["Club Sunshine", "Club Mercury"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "Yes"
+    }
+  },
+  {
+    "date": "08/10/2024",
+    "character": {
+      "id": 47,
+      "name": "Kotomi Asakura",
+      "sex": "Female",
+      "affiliation": ["Club Moon", "Five Stars"],
+      "hair": ["Black"],
+      "occupation": [],
+      "involvement": [],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  },
+  {
+    "date": "09/10/2024",
+    "character": {
+      "id": 14,
+      "name": "So Amon",
+      "sex": "Male",
+      "affiliation": ["Amon Clan"],
+      "hair": ["Black"],
+      "occupation": ["Assassin"],
+      "involvement": ["Substory"],
+      "first_game_appearance": "Yakuza 0",
+      "last_game_appearance": "Yakuza 0",
+      "karaoke": "No"
+    }
+  }
+]

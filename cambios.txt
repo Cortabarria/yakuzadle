@@ -179,3 +179,5 @@ Se acomodo los table headers y los square a un orden mejor estructurado. Ademas 
 Se agrego en /conclusion ConclusionComponent.jsx con el fin de quitar RenderWinScreen y RenderLoseScreen y se modifico ResultInformation.jsx para que dependiendo si recibe win o no
 se mostrara el contenido adecuado a lo que logro el usuario.
 
+UPDATETAZO!
+Se agrego el daily a la seleccion de modos. Cambiara cada dia ese pj.
