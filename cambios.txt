@@ -174,3 +174,8 @@ display: inline-block;
 Se adjusto para que este centrado tanto en win como lose screen. 
 
 Se acomodo los table headers y los square a un orden mejor estructurado. Ademas los fondos de los square se hicieron mas transparentes.
+
+- 30/7 -
+Se agrego en /conclusion ConclusionComponent.jsx con el fin de quitar RenderWinScreen y RenderLoseScreen y se modifico ResultInformation.jsx para que dependiendo si recibe win o no
+se mostrara el contenido adecuado a lo que logro el usuario.
+

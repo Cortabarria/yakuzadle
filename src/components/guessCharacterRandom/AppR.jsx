@@ -1,13 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ReturnCharactersJSON } from "../../utils/returnCharactersJSON";
 import { getRandomCharacter } from "../../utils/randomCharacter";
-import RenderWinScreen from "../conclusion/RenderWinScreen";
 import RenderGuess from "../guessInformation/RenderGuessR";
 import FailedAttempts from "./FailedAttempts";
 
 import "../../styles/styles.css";
 import "../../assets/fonts/fonts.css";
-import RenderLoseScreen from "../conclusion/RenderLoseScreen";
 import { getStaminanRoyale } from "../help/createCharacter";
 
 import BasicModal from "../modal/modalStaminan";
@@ -16,6 +14,7 @@ import getBackgroundImage from "../guessInformation/ImageBringer";
 
 import { arraysEqual } from "../../utils/utilFunction";
 
+import ConclusionComponent from "../conclusion/ConclusionComponent";
 
 function AppR() {
   const [peopleList, setPeopleList] = useState([]);
@@ -61,6 +60,7 @@ function AppR() {
     failedAttempts: [],
     sharedAttributes: {}, // New state to store shared attributes
     staminanUsed: false, // New state to track Staminan button usage
+    failedAttemptsShare: []
   });
 
   // Wait until randomCharacter is set before rendering
@@ -183,20 +183,30 @@ function AppR() {
   // Render the win screen if the score is 1
   if (state.score === 1) {
     return (
-      <RenderWinScreen
-        failedAttempts={state.failedAttempts}
+      <ConclusionComponent
+        gameOutcome={"win"}
         randomCharacter={randomCharacter}
+        failedAttempts={state.failedAttempts}
       />
+      // <RenderWinScreen
+      //   failedAttempts={state.failedAttempts}
+      //   randomCharacter={randomCharacter}
+      // />
     );
   }
 
   // Render the lose screen if the score is -10
-  if (state.score === -10) {
+  if (state.score === -2) {
     return (
-      <RenderLoseScreen
-        failedAttempts={state.failedAttempts}
+      <ConclusionComponent
+        gameOutcome={"lose"}
         randomCharacter={randomCharacter}
+        failedAttempts={state.failedAttempts}
       />
+      // <RenderLoseScreen
+      //   failedAttempts={state.failedAttempts}
+      //   randomCharacter={randomCharacter}
+      // />
     );
   }
 

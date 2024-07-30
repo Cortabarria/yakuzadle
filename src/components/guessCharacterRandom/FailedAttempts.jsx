@@ -18,8 +18,6 @@ const FailedAttempts = memo(({ failedAttempts, randomCharacter}) => {
         .slice()
         .reverse()
         .map((person, index) => {
-          let dobClass = "";
-          let higClass = "";
 
           // Check if affiliations match
           const fullMatch = arraysEqual(
