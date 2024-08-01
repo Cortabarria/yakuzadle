@@ -186,3 +186,5 @@ Se agrego el daily a la seleccion de modos. Cambiara cada dia ese pj.
 ---------------------------
 - 1/8 - 
 Se agrego un mejor metodo de obtener el Staminan Royale (EvenBetterStaminan) y se obtiene correctamente los atributos hechos previos a un refresh
+
+Se agrego el share button despues de completar el guess.

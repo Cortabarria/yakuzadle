@@ -9,6 +9,8 @@ import "../../assets/fonts/fonts.css";
 import LoseFailedInformation from "./LoseFailedInformation";
 import Button from "@mui/material/Button";
 
+import { getShareResults } from "../../utils/utilFunction.js";
+
 function ConfettiWin() {
   const [runConfetti, setRunConfetti] = useState(false);
 
@@ -36,9 +38,19 @@ function ResultInformation({ randomCharacter, failedAttempts, isWinner }) {
         </div>
       </div>
 
-      {/* <div>
-        <Button variant="contained">Share!</Button>
-      </div> */}
+      {
+        <div>
+          <Button
+            sx={{
+              marginTop: "10px"
+            }}
+            variant="contained"
+            onClick={getShareResults(failedAttempts, randomCharacter)}
+          >
+            Share!
+          </Button>
+        </div>
+      }
 
       <div>
         {isWinner ? (

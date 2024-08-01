@@ -100,3 +100,111 @@ export function getAttempts(peopleList) {
   return attempts;
 }
 
+export function getShareResults(attempts, character){
+  let shareMessage = "#Yakuzadle - " + getTodayDate() + " - " + attempts.length + "/10\n" ;
+  attempts.forEach((attempt) => {
+    // Sex
+    if (attempt.sex === character.sex) {
+      shareMessage = shareMessage.concat("🟩");
+    } else {
+      shareMessage = shareMessage.concat("🟥");
+    }
+
+    // Check if hair match
+    let fullMatchHair = arraysEqual(attempt.hair, character.hair);
+    let partialMatchHair = attempt.hair.some((har) =>
+      character.hair.includes(har)
+    );
+
+    if (fullMatchHair) {
+      shareMessage = shareMessage.concat("🟩");
+    } else if (partialMatchHair) {
+      shareMessage = shareMessage.concat("🟨");
+    } else {
+      shareMessage = shareMessage.concat("🟥");
+    }
+
+    // Check if affiliation match
+    let fullMatchAff = arraysEqual(attempt.affiliation, character.affiliation);
+    let partialMatchAff = attempt.affiliation.some((aff) =>
+      character.affiliation.includes(aff)
+    );
+
+    if (fullMatchAff) {
+      shareMessage = shareMessage.concat("🟩");
+    } else if (partialMatchAff) {
+      shareMessage = shareMessage.concat("🟨");
+    } else {
+      shareMessage = shareMessage.concat("🟥");
+    }
+
+    // Check if occupation match
+    let fullMatchOcc = arraysEqual(attempt.occupation, character.occupation);
+    let partialMatchOcc = attempt.occupation.some((occ) =>
+      character.occupation.includes(occ)
+    );
+
+    if (fullMatchOcc) {
+      shareMessage = shareMessage.concat("🟩");
+    } else if (partialMatchOcc) {
+      shareMessage = shareMessage.concat("🟨");
+    } else {
+      shareMessage = shareMessage.concat("🟥");
+    }
+
+    // First Game
+    if (attempt.first_game_appearance === character.first_game_appearance) {
+      shareMessage = shareMessage.concat("🟩");
+    } else {
+      shareMessage = shareMessage.concat("🟥");
+    }
+
+    // Last Game
+    if (attempt.last_game_appearance === character.last_game_appearance) {
+      shareMessage = shareMessage.concat("🟩");
+    } else {
+      shareMessage = shareMessage.concat("🟥");
+    }
+
+    // Check if involvement match
+    let fullMatchInv = arraysEqual(attempt.involvement, character.involvement);
+    let partialMatchInv = attempt.involvement.some((Inv) =>
+      character.involvement.includes(Inv)
+    );
+
+    if (fullMatchInv) {
+      shareMessage = shareMessage.concat("🟩");
+    } else if (partialMatchInv) {
+      shareMessage = shareMessage.concat("🟨");
+    } else {
+      shareMessage = shareMessage.concat("🟥");
+    }
+
+    // Karaoke
+    if (attempt.karaoke === character.karaoke) {
+      shareMessage = shareMessage.concat("🟩");
+    } else {
+      shareMessage = shareMessage.concat("🟥");
+    }
+
+    shareMessage = shareMessage.concat("\n");
+
+
+  });
+
+  if (navigator.clipboard && window.isSecureContext) {
+    // navigator.clipboard is only available in secure contexts (https)
+    navigator.clipboard
+      .writeText(shareMessage)
+      .then(() => {
+        console.log("Text copied to clipboard");
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
+  } else {
+    // Fallback method using execCommand
+  }
+
+
+}
