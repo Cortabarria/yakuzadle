@@ -36,9 +36,9 @@ function ResultInformation({ randomCharacter, failedAttempts, isWinner }) {
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <Button variant="contained">Share!</Button>
-      </div>
+      </div> */}
 
       <div>
         {isWinner ? (

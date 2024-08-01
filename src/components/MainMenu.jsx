@@ -25,7 +25,7 @@ function MainMenu() {
     return (
       <Routes>
         <Route path="/random" element={<AppR />} />
-        <Route path="/daily" element={<AppR charac={char} />} />
+        <Route path="/daily" element={<AppR charac={char} daily={true} listChar={list}/>} />
 
         {/* <Route path="/irezumi" element={<AppIR />} />
         <Route path="/test" element={<MainComponent />} /> */}

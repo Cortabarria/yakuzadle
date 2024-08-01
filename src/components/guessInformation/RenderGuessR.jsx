@@ -174,7 +174,7 @@ const RenderGuess = memo(({
             variant="contained"
             color="primary"
             onClick={handleStaminanClick}
-            disabled={staminanUsed || score > -5}
+            disabled={staminanUsed || score < 4}
           >
             <img
               src={`${process.env.PUBLIC_URL}/images/assets/staminan.webp`}

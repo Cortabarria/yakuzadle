@@ -1,4 +1,5 @@
 import Person from "../../model/Person";
+import { arraysEqual } from "../../utils/utilFunction";
 
 // Guarda los valores que el usuario ya saco en intentos pasados
 function createCharacterFromAttributes(sharedAttributes) {
@@ -14,6 +15,7 @@ function createCharacterFromAttributes(sharedAttributes) {
     last_game_appearance: sharedAttributes.last_game_appearance || "",
     karaoke: sharedAttributes.karaoke || "",
   });
+  console.log("Persona es " + person.occupation);
   return person;
 }
 
@@ -29,9 +31,11 @@ function difference(character, random) {
         }
 
         if (random[prop] !== character[prop]) {
-            // console.log(prop);
-            // console.log(random[prop]);
-            // console.log(character[prop]);
+            console.log("createCharacter.js - prop-> " + prop);
+            console.log("createCharacter.js - valor de prop del random-> " + random[prop]);
+            console.log(
+              "createCharacter.js - valor de prop de character-> " + character[prop]
+            );
 
             differingAttributes.push({ attribute: prop, value: random[prop] });
         }
@@ -110,5 +114,73 @@ function createPersonWithRandomAttribute(randomDifferingAttribute) {
 
 
 export function getStaminanRoyale(sharedAttributes, random) {
-  return difference(createCharacterFromAttributes(sharedAttributes), random);
+  let per = createCharacterFromAttributes(sharedAttributes);
+  // console.log("getStaminanRoyale - per " + per);
+  console.log("sharedAttributes de getStaminan son " + sharedAttributes);
+  return difference(per, random);
+}
+
+export function getBetterStaminanRoyale(attemptsMade, characterToGuess) {
+  console.log("Attempts Made:", attemptsMade);
+
+  attemptsMade.forEach((person) => {
+    for (let key in characterToGuess) {
+      if (
+        characterToGuess[key] === person[key] &&
+        key !== "id" &&
+        key !== "name"
+      ) {
+        // console.log(
+        //   "la key es " + key + " y el conte es " + characterToGuess[key]
+        // );
+        characterToGuess[key] = "";
+      }
+    }
+  });
+
+  // Get a list of non-empty attributes
+  const nonEmptyAttributes = Object.entries(characterToGuess).filter(
+    ([key, value]) => value !== ""
+  );
+
+  console.log("Non empty " + nonEmptyAttributes);
+
+  // If there are no non-empty attributes, return null
+  if (nonEmptyAttributes.length === 0) return null;
+
+  // Select a random attribute from the non-empty ones
+  const [key, value] =
+    nonEmptyAttributes[Math.floor(Math.random() * nonEmptyAttributes.length)];
+
+  // Initialize a new Person object with the selected attribute
+  const StaminanRoyale = new Person({ [key]: value, name: "Staminan Royale" });
+
+  return StaminanRoyale;
+}
+
+export function evenBetterStaminan(attempts, randomCharacter){
+  // Compare attributes
+  const newSharedAttributes = {};
+  attempts.forEach((selectedCharacter) => {
+    if (selectedCharacter) {
+      Object.keys(randomCharacter).forEach((key) => {
+        let isEqual;
+        if (
+          Array.isArray(randomCharacter[key]) &&
+          Array.isArray(selectedCharacter[key])
+        ) {
+          isEqual = arraysEqual(randomCharacter[key], selectedCharacter[key]);
+        } else {
+          isEqual = randomCharacter[key] === selectedCharacter[key];
+        }
+
+        if (isEqual) {
+          // console.log(key);
+          newSharedAttributes[key] = randomCharacter[key];
+        }
+      });
+    }
+  });
+
+  return getStaminanRoyale(newSharedAttributes, randomCharacter);
 }
