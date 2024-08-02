@@ -188,9 +188,13 @@ export function getShareResults(attempts, character){
     }
 
     shareMessage = shareMessage.concat("\n");
-
-
+    
+    
   });
+  
+  shareMessage = shareMessage.concat(
+    "https://cortabarria.github.io/yakuzadle/"
+  );
 
   if (navigator.clipboard && window.isSecureContext) {
     // navigator.clipboard is only available in secure contexts (https)

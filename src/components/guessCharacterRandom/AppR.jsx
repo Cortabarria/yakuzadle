@@ -45,9 +45,7 @@ function AppR({charac, daily, listChar}) {
 
   useEffect(() => {
     if (!hasInitialized.current) {
-      // Load score from localStorage and set it in the state
-      const storedScore = localStorage.getItem(todayDate + "-dailyScore");
-      const parsedScore = storedScore ? parseInt(storedScore, 10) : 0;
+
 
       
       // Generate the list of characters and a random character
@@ -70,28 +68,44 @@ function AppR({charac, daily, listChar}) {
       })
 
 
-      // Load shared attributes for staminan
-      let storedSharedAtt = 0;
-      let sharedAttributesStored = {};
-      storedSharedAtt = localStorage.getItem("sharedAttributes@"+ todayDate + "@dailyAttempts");
+      if(daily){
+        // Load score from localStorage and set it in the state
+        const storedScore = localStorage.getItem(todayDate + "-dailyScore");
+        const parsedScore = storedScore ? parseInt(storedScore, 10) : 0;
 
-      if (storedSharedAtt !== null){
-        sharedAttributesStored = (JSON.parse(storedSharedAtt));
-        console.log(
-          "AppR.jsx - 79 - sharedAttributesStored: " + storedSharedAtt
+        // Load shared attributes for staminan
+        let storedSharedAtt = 0;
+        let sharedAttributesStored = {};
+        storedSharedAtt = localStorage.getItem(
+          "sharedAttributes@" + todayDate + "@dailyAttempts"
         );
-        console.log(JSON.parse(storedSharedAtt));
-      }
 
-      // Load staminan used
-      let staminanUsed;
-      let staminanUsedStored = localStorage.getItem(
-        "staminanUsed@" + todayDate + "@dailyAttempts"
-      );
-      if (staminanUsedStored === "1") {
-        staminanUsed = true;
-      }else{
-        staminanUsed = false;
+        if (storedSharedAtt !== null) {
+          sharedAttributesStored = JSON.parse(storedSharedAtt);
+          console.log(
+            "AppR.jsx - 79 - sharedAttributesStored: " + storedSharedAtt
+          );
+          console.log(JSON.parse(storedSharedAtt));
+        }
+
+        // Load staminan used
+        let staminanUsed;
+        let staminanUsedStored = localStorage.getItem(
+          "staminanUsed@" + todayDate + "@dailyAttempts"
+        );
+        if (staminanUsedStored === "1") {
+          staminanUsed = true;
+        } else {
+          staminanUsed = false;
+        }
+
+        setState((prevState) => ({
+          ...prevState,
+          score: parsedScore,
+          failedAttempts: previousAttemptsMade,
+          sharedAttributes: sharedAttributesStored,
+          staminanUsed: staminanUsed,
+        }));
       }
 
       
@@ -100,13 +114,6 @@ function AppR({charac, daily, listChar}) {
       preloadImages(list);
       
       // Mark the initialization as done
-      setState((prevState) => ({
-        ...prevState,
-        score: parsedScore,
-        failedAttempts: previousAttemptsMade,
-        sharedAttributes: sharedAttributesStored,
-        staminanUsed: staminanUsed,
-      }));
       
 
       hasInitialized.current = true;
@@ -231,8 +238,8 @@ function AppR({charac, daily, listChar}) {
 
   function handleStaminanClick() {
     setIsModalWantToUseOpen(false);
-    console.log("Aca viene: "); 
-    console.log(state.sharedAttributes);
+/*     console.log("Aca viene: "); 
+    console.log(state.sharedAttributes); */
 
     if (!state.staminanUsed) {
 /*       const staminanCharacter = getStaminanRoyale(
@@ -253,13 +260,15 @@ function AppR({charac, daily, listChar}) {
           failedAttempts: [...prevState.failedAttempts, staminanCharacter],
           staminanUsed: true,
         }));
-        localStorage.setItem(
-          todayDate + "@" + state.score + "@dailyAttempts",
-          JSON.stringify(staminanCharacter)
-        );
-        localStorage.setItem(
-          "staminanUsed@" + todayDate + "@dailyAttempts", 1
-        );
+        if(daily){
+          localStorage.setItem(
+            todayDate + "@" + state.score + "@dailyAttempts",
+            JSON.stringify(staminanCharacter)
+          );
+          localStorage.setItem(
+            "staminanUsed@" + todayDate + "@dailyAttempts", 1
+          );
+        }
       }
     }
   }
@@ -323,6 +332,7 @@ function AppR({charac, daily, listChar}) {
         gameOutcome={"win"}
         randomCharacter={randomCharacter}
         failedAttempts={state.failedAttempts}
+        daily={daily}
       />
     );
   }
@@ -339,6 +349,7 @@ function AppR({charac, daily, listChar}) {
         gameOutcome={"lose"}
         randomCharacter={randomCharacter}
         failedAttempts={state.failedAttempts}
+        daily={daily}
       />
     );
   }

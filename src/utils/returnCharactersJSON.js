@@ -1,5 +1,5 @@
 import Person from "../model/Person";
-import peopleData from "./data5.json";
+import peopleData from "./data.json";
 
 
 export function ReturnCharactersJSON() {

@@ -23,7 +23,7 @@ function ConfettiWin() {
   return <ConfettiComponent runConfetti={runConfetti} />;
 }
 
-function ResultInformation({ randomCharacter, failedAttempts, isWinner }) {
+function ResultInformation({ randomCharacter, failedAttempts, isWinner, daily }) {
   return (
     <div className="result">
       <div id="winner" className="winner myriad-text removeLater">
@@ -38,20 +38,19 @@ function ResultInformation({ randomCharacter, failedAttempts, isWinner }) {
         </div>
       </div>
 
-      {
+      {daily && (
         <div>
           <Button
             sx={{
-              marginTop: "10px"
+              marginTop: "10px",
             }}
             variant="contained"
-            onClick={getShareResults(failedAttempts, randomCharacter)}
+            onClick={() => getShareResults(failedAttempts, randomCharacter)}
           >
             Share!
           </Button>
         </div>
-      }
-
+      )}
       <div>
         {isWinner ? (
           ""

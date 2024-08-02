@@ -188,3 +188,8 @@ Se agrego el daily a la seleccion de modos. Cambiara cada dia ese pj.
 Se agrego un mejor metodo de obtener el Staminan Royale (EvenBetterStaminan) y se obtiene correctamente los atributos hechos previos a un refresh
 
 Se agrego el share button despues de completar el guess.
+Se mejoro el share text.
+-----------------------------
+- 2/8 -
+Se agregaron nuevos pjs y se updateo la daily.
+Added the content="Yakuzadle, the Like a Dragon guessing game!"
