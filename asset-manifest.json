@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/yakuzadle/static/css/main.9f2f8e4c.css",
-    "main.js": "/yakuzadle/static/js/main.f410b10c.js",
+    "main.js": "/yakuzadle/static/js/main.795459f2.js",
     "static/js/453.324549ae.chunk.js": "/yakuzadle/static/js/453.324549ae.chunk.js",
     "static/media/bg.webp": "/yakuzadle/static/media/bg.61aa37c152ae5f42a4b8.webp",
     "static/media/MyriadPro-Light.otf": "/yakuzadle/static/media/MyriadPro-Light.1d169f609b1972709363.otf",
     "static/media/edosz.ttf": "/yakuzadle/static/media/edosz.0be6a7a25374d83f251f.ttf",
     "index.html": "/yakuzadle/index.html",
     "main.9f2f8e4c.css.map": "/yakuzadle/static/css/main.9f2f8e4c.css.map",
-    "main.f410b10c.js.map": "/yakuzadle/static/js/main.f410b10c.js.map",
+    "main.795459f2.js.map": "/yakuzadle/static/js/main.795459f2.js.map",
     "453.324549ae.chunk.js.map": "/yakuzadle/static/js/453.324549ae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f2f8e4c.css",
-    "static/js/main.f410b10c.js"
+    "static/js/main.795459f2.js"
   ]
 }
