@@ -55,20 +55,22 @@ function AppR({charac, daily, listChar}) {
       charac !== undefined ? charac : getRandomCharacter(list);
       setRandomCharacter(character);
       
-      // This is for the attempts made before
-      const previousAttemptsMade = getAttempts(list);
-      previousAttemptsMade.forEach((char) => {
-        setPeopleList((prevList) =>
-          prevList.filter(
-            (person) => person.name.toLowerCase() !== char.name.toLowerCase()
-          )
-        );
-        // sharedAttributesCheck(char);
-
-      })
-
-
+      
+      
       if(daily){
+
+        // This is for the attempts made before
+        const previousAttemptsMade = getAttempts(list);
+        previousAttemptsMade.forEach((char) => {
+          setPeopleList((prevList) =>
+            prevList.filter(
+              (person) => person.name.toLowerCase() !== char.name.toLowerCase()
+            )
+          );
+          // sharedAttributesCheck(char);
+  
+        })
+        
         // Load score from localStorage and set it in the state
         const storedScore = localStorage.getItem(todayDate + "-dailyScore");
         const parsedScore = storedScore ? parseInt(storedScore, 10) : 0;

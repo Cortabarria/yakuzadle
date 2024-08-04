@@ -193,3 +193,7 @@ Se mejoro el share text.
 - 2/8 -
 Se agregaron nuevos pjs y se updateo la daily.
 Added the content="Yakuzadle, the Like a Dragon guessing game!"
+-----------------------------
+- 4/8 -
+Arreglado error de que se te eliminaban los personajes usados en el Daily, en el modo Random.
+Arreglado typo de Yazukadle a Yakuzadle en .json.
